@@ -10,6 +10,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Xamarin.Forms" Version="4.4.0.991640"/>
+        <PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
+        <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="5.0.1" />
+        <PackageReference Include="Xamarin.Forms" Version="4.8.0.1821" />
     </ItemGroup>
 </Project>

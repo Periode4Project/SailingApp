@@ -4,11 +4,18 @@
              xmlns:local="clr-namespace:Sailing"
              x:Class="Sailing.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <!--<ContentPage.BindingContext>
+        <View:Activiteit/>
+    </ContentPage.BindingContext>-->
 
+    <ListView BackgroundColor="DarkBlue">
+        <ListView.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String>Item One</x:String>
+                <x:String>Item Two</x:String>
+                <x:String>Item Three</x:String>
+            </x:Array>
+        </ListView.ItemsSource>
+    </ListView>
+    
 </ContentPage>
