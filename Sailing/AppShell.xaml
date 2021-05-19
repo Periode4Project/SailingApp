@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Sailing"
+             Title="PlantjesApp" 
+             x:Class="Sailing.AppShell">
+    
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Color x:Key="NavigationPrimary">#FFFFFF</Color>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="#FFFFFF"/><!--Upper Nav Bar-->
+                <Setter Property="Shell.ForegroundColor" Value="#FFFFFF" />
+                <Setter Property="Shell.TitleColor" Value="#2E92CB" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#FFFFFF" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="#FFFFFF"/>
+                <Setter Property="Shell.TabBarForegroundColor" Value="#2E92CB"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#505050"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="#2E92CB"/>
+            </Style>
+            <Style TargetType="TabBar"  BasedOn="{StaticResource BaseStyle}"/>
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <TabBar>
+        <ShellContent Title="Activities" Icon="Home_Icon" ContentTemplate="{DataTemplate local:MainPage}" />
+        <ShellContent Title="My Account" Icon="MyAccount_Icon.png"  ContentTemplate="{DataTemplate local:MyAccount}" />
+        <ShellContent Title="Settings" Icon="Settings.png" ContentTemplate="{DataTemplate local:Settings}"/>
+    </TabBar>
+
+    </Shell>
