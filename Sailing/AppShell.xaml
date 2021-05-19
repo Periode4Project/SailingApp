@@ -4,7 +4,9 @@
              xmlns:local="clr-namespace:Sailing"
              Title="PlantjesApp" 
              x:Class="Sailing.AppShell">
-    
+
+ 
+
     <Shell.Resources>
         <ResourceDictionary>
             <Color x:Key="NavigationPrimary">#FFFFFF</Color>
@@ -23,10 +25,11 @@
         </ResourceDictionary>
     </Shell.Resources>
 
+
     <TabBar>
         <ShellContent Title="Activities" Icon="Home_Icon" ContentTemplate="{DataTemplate local:MainPage}" />
         <ShellContent Title="My Account" Icon="MyAccount_Icon.png"  ContentTemplate="{DataTemplate local:MyAccount}" />
         <ShellContent Title="Settings" Icon="Settings.png" ContentTemplate="{DataTemplate local:Settings}"/>
     </TabBar>
 
-    </Shell>
+</Shell>

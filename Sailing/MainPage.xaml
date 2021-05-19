@@ -3,10 +3,30 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Sailing"
              x:Class="Sailing.MainPage">
+
+    <Shell.TitleView>
+        <Image Source="FrisianSailingCompanyHeader0.png" VerticalOptions="Center" HorizontalOptions="Center"/>
+    </Shell.TitleView>
+
     <ContentPage.Content>
         <ScrollView>
             <StackLayout BackgroundColor="{StaticResource PrimaryColor}">
-                <!-- Place new controls here -->
+
+                <Grid BackgroundColor="{StaticResource TertiaryColor}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="SearchIcon.png" Grid.Column="0" WidthRequest="45" HeightRequest="45"/>
+                    <Entry x:Name="SearchActivity" Grid.Column="1" Grid.ColumnSpan="3" Placeholder="Search Activity..." PlaceholderColor="#909090"/>
+                    <Image Source="FilterIcon.png" Grid.Column="4" WidthRequest="45" HeightRequest="45"/>
+                </Grid>
+
                 <Label Text="Activities in your Area:" Style="{StaticResource PageHeader}"/>
                 
                 <StackLayout x:Name="Activity" BackgroundColor="#FFFFFF" Padding="20,0">
