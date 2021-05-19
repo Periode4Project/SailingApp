@@ -4,9 +4,22 @@
              x:Class="Sailing.Settings">
     <ContentPage.Content>
         <StackLayout BackgroundColor="{StaticResource PrimaryColor}">
-            <Label Text="Settings" Style="{StaticResource PageHeader}" />
+            
+            <Label  Text="Settings" Style="{StaticResource PageHeader}" />
+
+            <Label Padding="10,0,0,0" TextColor="{StaticResource TertiaryColor}" FontSize="16" Text="Language:"/>
+            <Picker Margin="10" TitleColor="{StaticResource TertiaryColor}" TextColor="{StaticResource TertiaryColor}" x:Name="LanguageSelect">
+                <Picker.Items>
+                    <x:String>English</x:String>
+                    <x:String>Nederlands</x:String>
+                    <x:String>Deutsch</x:String>
+                    <x:String>Frysk</x:String>
+                </Picker.Items>
+            </Picker>
             
             
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
