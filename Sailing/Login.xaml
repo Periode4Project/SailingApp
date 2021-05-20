@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sailing.Login">
+    
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="{StaticResource PrimaryColor}">
+            <Label Text="Login" Style="{StaticResource PageHeader}" />
+
+            <Label Text="Username:" VerticalTextAlignment="Center" TextColor="{StaticResource TertiaryColor}" FontSize="20" Margin="20,100,20,0"/>
+            <Entry x:Name="Username" Placeholder="Username..." PlaceholderColor="#BBBBBB" Margin="20,0"/>
+
+            <Label Text="Password:" TextColor="{StaticResource TertiaryColor}" FontSize="20" Margin="20,0"/>
+            <Entry x:Name="Password" Placeholder="Password..." PlaceholderColor="#BBBBBB" IsPassword="True" Margin="20,0"/>
+            <Button x:Name="ForgotPW" Text="Forgot Password?" TextColor="{StaticResource TertiaryColor}" FontSize="26" BackgroundColor="{StaticResource PrimaryColor}" Margin="20,0" Clicked="ForgotPW_Clicked"/>
+
+            <Button Text="Login" x:Name="LoginButton" Padding="20,0" Margin="20,0" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="80" TextColor="{StaticResource TertiaryColor}" BorderWidth="3" BorderColor="{StaticResource TertiaryColor}" CornerRadius="20" Clicked="LoginButton_Clicked"/>
+
+            <Button Text="Register" x:Name="RegisterButton" Padding="20,0"  Margin="20,0" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="50" TextColor="{StaticResource TertiaryColor}" BorderWidth="3" BorderColor="{StaticResource TertiaryColor}" CornerRadius="20" Clicked="RegisterButton_Clicked" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
