@@ -4,18 +4,9 @@
              xmlns:local="clr-namespace:Sailing"
              x:Class="Sailing.MainPage">
 
-    <!--<ContentPage.BindingContext>
-        <View:Activiteit/>
-    </ContentPage.BindingContext>-->
+    <StackLayout BackgroundColor="{StaticResource PrimaryColor}">
+        <!-- Place new controls here -->
+        <Label Text="Activities in your Area:" Style="{StaticResource PageHeader}"/>
+    </StackLayout>
 
-    <ListView BackgroundColor="DarkBlue">
-        <ListView.ItemsSource>
-            <x:Array Type="{x:Type x:String}">
-                <x:String>Item One</x:String>
-                <x:String>Item Two</x:String>
-                <x:String>Item Three</x:String>
-            </x:Array>
-        </ListView.ItemsSource>
-    </ListView>
-    
 </ContentPage>

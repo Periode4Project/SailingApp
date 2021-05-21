@@ -3,6 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Sailing.App">
     <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="PrimaryColor">#183270</Color>
+            <Color x:Key="SecondaryColor">#2E92CB</Color>
+            <Color x:Key="TertiaryColor">#FFFFFF</Color>
 
+            <Style x:Key="PageHeader" TargetType="Label">
+                <Setter Property="FontSize" Value="28"/>
+                <Setter Property="TextColor" Value="#FFFFFF"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
