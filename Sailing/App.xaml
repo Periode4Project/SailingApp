@@ -7,6 +7,9 @@
             <Color x:Key="PrimaryColor">#183270</Color>
             <Color x:Key="SecondaryColor">#2E92CB</Color>
             <Color x:Key="TertiaryColor">#FFFFFF</Color>
+            <Color x:Key="SuccessColour">#5cb85c</Color>
+            <Color x:Key="NegativeColour">#d9534f</Color>
+            <Color x:Key="Grey">#BBBBBB</Color>
 
             <Style x:Key="PageHeader" TargetType="Label">
                 <Setter Property="FontSize" Value="28"/>

@@ -8,14 +8,14 @@
             <Label Text="Login" Style="{StaticResource PageHeader}" />
 
             <Label Text="Username:" VerticalTextAlignment="Center" TextColor="{StaticResource TertiaryColor}" FontSize="20" Margin="20,100,20,0"/>
-            <Entry x:Name="Username" Placeholder="Username..." PlaceholderColor="#BBBBBB" Margin="20,0"/>
+            <Entry x:Name="Username" TextColor="{StaticResource TertiaryColor}" Placeholder="Username..." PlaceholderColor="#BBBBBB" Margin="20,0"/>
 
             <Label Text="Password:" TextColor="{StaticResource TertiaryColor}" FontSize="20" Margin="20,0"/>
-            <Entry x:Name="Password" Placeholder="Password..." PlaceholderColor="#BBBBBB" IsPassword="True" Margin="20,0"/>
+            <Entry x:Name="Password" TextColor="{StaticResource TertiaryColor}" Placeholder="Password..." PlaceholderColor="#BBBBBB" IsPassword="True" Margin="20,0"/>
             <Button x:Name="ForgotPW" Text="Forgot Password?" TextColor="{StaticResource TertiaryColor}" FontSize="26" BackgroundColor="{StaticResource PrimaryColor}" Margin="20,0" Clicked="ForgotPW_Clicked"/>
 
             <Button Text="Login" x:Name="LoginButton" Padding="20,0" Margin="20,0" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="80" TextColor="{StaticResource TertiaryColor}" BorderWidth="3" BorderColor="{StaticResource TertiaryColor}" CornerRadius="20" Clicked="LoginButton_Clicked"/>
-
+            <Label Text="Already have an account? Click Here!:" HorizontalOptions="Center" Padding="0,20,0,0" TextColor="{StaticResource TertiaryColor}"/>
             <Button Text="Register" x:Name="RegisterButton" Padding="20,0"  Margin="20,0" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="50" TextColor="{StaticResource TertiaryColor}" BorderWidth="3" BorderColor="{StaticResource TertiaryColor}" CornerRadius="20" Clicked="RegisterButton_Clicked" />
 
         </StackLayout>

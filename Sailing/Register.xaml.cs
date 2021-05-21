@@ -21,5 +21,10 @@ namespace Sailing
         {
             //Create New Account If Not Exist
         }
+
+        private async void LoginButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Login());
+        }
     }
 }

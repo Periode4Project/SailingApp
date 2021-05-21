@@ -41,7 +41,9 @@
 
                 <Label Text="Activities in your Area:" Style="{StaticResource PageHeader}"/>
 
-                <StackLayout x:Name="Activity" BackgroundColor="#FFFFFF" Padding="20,0">
+
+                <!--Activity Shell-->
+                    <StackLayout x:Name="Activity" BackgroundColor="#FFFFFF" Padding="20,0">
 
                     <!--Click Event-->
                     <StackLayout.GestureRecognizers>
@@ -53,7 +55,7 @@
 
                     <Image x:Name="ActivityImg" Source="RamseysExample.jpg" WidthRequest="300" HeightRequest="200"/>
                     <Label FontSize="5"/>
-                    <!--Blank Rule-->
+
                     <BoxView HeightRequest="1" BackgroundColor="Black"/>
 
                     <Label x:Name="ActivityTitle" Text="Ramsey's Steakhouse" FontSize="Title"  TextColor="Black" FontAttributes="Bold"/>
@@ -95,9 +97,9 @@
                     </Label>
 
                     <Label FontSize="12"/>
-                    <!--Blank Rule-->
 
                 </StackLayout>
+                <!--Activity Shell-->
 
             </StackLayout>
         </ScrollView>

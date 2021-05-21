@@ -16,10 +16,26 @@
                     <x:String>Frysk</x:String>
                 </Picker.Items>
             </Picker>
-            
-            
 
+            <Label FontSize="32"/>
 
+            <Label Padding="10,0,0,0" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource TertiaryColor}" FontSize="16" Text="Current Location:"/>
+            <Frame x:Name="GPSIndicator"  Margin="10,0" CornerRadius="20" BackgroundColor="{StaticResource SuccessColour}">
+                <Label FontSize="26" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="#228b22">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Location: "/>
+                                <Span x:Name="GPSLocation" Text="Heerenveen"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
+
+            <Button x:Name="GetStartedButton" Text="Get Started" BackgroundColor="{StaticResource PrimaryColor}" FontSize="24" VerticalOptions="EndAndExpand" HeightRequest="100" TextColor="{StaticResource TertiaryColor}" BorderWidth="3" BorderColor="{StaticResource TertiaryColor}" CornerRadius="45" Clicked="GetStartedButton_Clicked"/>
+            <Button x:Name="SaveSettings" Text="Save Settings" BackgroundColor="{StaticResource PrimaryColor}" FontSize="24" VerticalOptions="End" HeightRequest="100" TextColor="{StaticResource TertiaryColor}" BorderWidth="3" BorderColor="{StaticResource TertiaryColor}" CornerRadius="45" Clicked="SaveSettings_Clicked"/>
+        
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
