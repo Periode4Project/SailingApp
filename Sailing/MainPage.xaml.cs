@@ -16,11 +16,7 @@ namespace Sailing
         public MainPage()
         {
             InitializeComponent();
-        }
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();ActivityItems.Get();
+            activityItems = new List<ActivityItem>(ActivityItems.Get());
             collectionViewListHorizontal.ItemsSource = activityItems;
         }
 

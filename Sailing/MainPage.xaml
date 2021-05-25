@@ -42,67 +42,72 @@
                 <Label Text="Activities in your Area:" Style="{StaticResource PageHeader}"/>
 
                 <CollectionView x:Name="collectionViewListHorizontal" >
-                    
-                </CollectionView>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <!--Activity Shell-->
+                            <Frame BackgroundColor="#FFFFFF" CornerRadius="35" Margin="15, 0">
+                                    <StackLayout x:Name="Activity" Margin="0, 15">
 
-                <!--Activity Shell
-                <Frame BackgroundColor="#FFFFFF" CornerRadius="35" Margin="15, 0">
-                    <StackLayout x:Name="Activity">
+                                        <!--Click Event-->
+                                        <StackLayout.GestureRecognizers>
+                                            <TapGestureRecognizer x:Name="ActivityClicked" Tapped="ActivityClicked_Tapped"/>
+                                        </StackLayout.GestureRecognizers>
+                                        <!--Click Event-->
 
-                        <!Click Event
-                        <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer x:Name="ActivityClicked" Tapped="ActivityClicked_Tapped"/>
-                        </StackLayout.GestureRecognizers>
-                        <!Click Event
+                                        <Image x:Name="ActivityImg" Source="{Binding ActivityImage}" WidthRequest="300" HeightRequest="200"/>
 
-                        <Image x:Name="ActivityImg" Source="RamseysExample.jpg" WidthRequest="300" HeightRequest="200"/>
+                                        <BoxView HeightRequest="1" BackgroundColor="Black"/>
 
-                        <BoxView HeightRequest="1" BackgroundColor="Black"/>
+                                        <Label x:Name="ActivityTitle" Text="{Binding ActivityName}" FontSize="Title"  TextColor="Black" FontAttributes="Bold"/>
 
-                        <Label x:Name="ActivityTitle" Text="Ramsey's Steakhouse" FontSize="Title"  TextColor="Black" FontAttributes="Bold"/>
-
-                        <Label Margin="0,-12" FontSize="16" TextColor="Black">
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <FormattedString.Spans>
-                                        <Span Text="Type: " />
-                                        <Span x:Name="ActivityType" Text="Restaurant" />
-                                    </FormattedString.Spans>
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
-
-
-                        <Label FontSize="16" TextColor="Black">
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <FormattedString.Spans>
-                                        <Span Text="Location: "/>
-                                        <Span x:Name="ActivityLocation" Text="{Binding }"/>
-                                    </FormattedString.Spans>
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
+                                        <Label Margin="0,-12" FontSize="16" TextColor="Black">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <FormattedString.Spans>
+                                                        <Span Text="Type: " />
+                                                        <Span x:Name="ActivityType" Text="{Binding ActivityType}" />
+                                                    </FormattedString.Spans>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
 
 
-                        <Label  Margin="0,-12" FontSize="16" TextColor="Black">
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <FormattedString.Spans>
-                                        <Span Text="Enterance Fee: " />
-                                        <Span x:Name="ActivityFee" Text="10"/>
-                                        <Span Text="EUR"/>
-                                    </FormattedString.Spans>
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
+                                        <Label FontSize="16" TextColor="Black">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <FormattedString.Spans>
+                                                        <Span Text="Location: "/>
+                                                        <Span x:Name="ActivityLocation" Text="{Binding ActivityLocation}"/>
+                                                    </FormattedString.Spans>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
 
-                        <Label FontSize="12"/>
 
-                    </StackLayout>
-                    
-                </Frame>
-                Activity Shell -->
+                                        <Label  Margin="0,-12" FontSize="16" TextColor="Black">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <FormattedString.Spans>
+                                                        <Span Text="Enterance Fee: " />
+                                                        <Span x:Name="ActivityFee" Text="{Binding EntranceFee}"/>
+                                                        <Span Text="EUR"/>
+                                                    </FormattedString.Spans>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+
+                                        <Label FontSize="12"/>
+
+                                    </StackLayout>
+
+                                </Frame>
+
+
+
+                            <!-- Shell -->
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                    </CollectionView>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
