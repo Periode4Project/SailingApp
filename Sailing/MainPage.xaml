@@ -41,16 +41,19 @@
 
                 <Label Text="Activities in your Area:" Style="{StaticResource PageHeader}"/>
 
+                <CollectionView x:Name="collectionViewListHorizontal" >
+                    
+                </CollectionView>
 
-                <!--Activity Shell-->
+                <!--Activity Shell
                 <Frame BackgroundColor="#FFFFFF" CornerRadius="35" Margin="15, 0">
                     <StackLayout x:Name="Activity">
 
-                        <!--Click Event-->
+                        <!Click Event
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer x:Name="ActivityClicked" Tapped="ActivityClicked_Tapped"/>
                         </StackLayout.GestureRecognizers>
-                        <!--Click Event-->
+                        <!Click Event
 
                         <Image x:Name="ActivityImg" Source="RamseysExample.jpg" WidthRequest="300" HeightRequest="200"/>
 
@@ -75,7 +78,7 @@
                                 <FormattedString>
                                     <FormattedString.Spans>
                                         <Span Text="Location: "/>
-                                        <Span x:Name="ActivityLocation" Text="Heerenveen, Eau Rouge 4"/>
+                                        <Span x:Name="ActivityLocation" Text="{Binding }"/>
                                     </FormattedString.Spans>
                                 </FormattedString>
                             </Label.FormattedText>
@@ -99,7 +102,7 @@
                     </StackLayout>
                     
                 </Frame>
-                <!--Activity Shell-->
+                Activity Shell -->
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
