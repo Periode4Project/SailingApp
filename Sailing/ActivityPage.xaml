@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:sailing="clr-namespace:Sailing" x:DataType="sailing:ActivityPage" 
              x:Class="Sailing.ActivityPage">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Padding="20,0" BackgroundColor="{StaticResource PrimaryColor}">
-                <Image Source="RamseysExample" WidthRequest="300" HeightRequest="200"/>
+                <Image x:Name="ActivityImg" Source="RamseysExample" WidthRequest="300" HeightRequest="200"/>
 
-                <Label Text="Ramsey's Steakhouse" HorizontalOptions="Start" Style="{StaticResource PageHeader}"/>
+                <Label x:Name="ActivityName" Text="Ramsey's Steakhouse" HorizontalOptions="Start" Style="{StaticResource PageHeader}"/>
 
                 <Label FontSize="5"/>
 
@@ -39,7 +39,7 @@
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
-                                <Span Text="Enterance Fee: " />
+                                <Span Text="Entrance Fee: " />
                                 <Span x:Name="ActivityFee" Text="10"/>
                                 <Span Text="EUR"/>
                             </FormattedString.Spans>
@@ -79,40 +79,28 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
+                <Frame BackgroundColor="{StaticResource PrimaryColor}" BorderColor="{StaticResource TertiaryColor}">
+                    <StackLayout>
+                        <Label x:Name="ReviewName" Text="Incredible Restaurant!" FontSize="24" FontAttributes="Bold" TextColor="{StaticResource TertiaryColor}"/>
 
-                <!--All Reviews of activity in Carouselview-->
-                
-                <!--<CarouselView x:Name="ReviewSection">
-                    <CarouselView.ItemTemplate>
-                        <DataTemplate>
-                            <StackLayout>-->
-                                <!--foreach review println-->
-                                <Frame BackgroundColor="{StaticResource PrimaryColor}" BorderColor="{StaticResource TertiaryColor}">
-                                    <StackLayout>
-                                        <Label x:Name="ReviewName" Text="Incredible Restaurant!" FontSize="24" FontAttributes="Bold" TextColor="{StaticResource TertiaryColor}"/>
+                        <Label x:Name="ReviewRating" FontSize="18" TextColor="#00FF00">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span x:Name="UserRating" Text="8.7"/>
+                                        <Span Text="/"/>
+                                        <Span Text="10"/>
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
 
-                                        <Label x:Name="ReviewRating" FontSize="18" TextColor="#00FF00">
-                                            <Label.FormattedText>
-                                                <FormattedString>
-                                                    <FormattedString.Spans>
-                                                        <Span x:Name="UserRating" Text="8.7"/>
-                                                        <Span Text="/"/>
-                                                        <Span Text="10"/>
-                                                    </FormattedString.Spans>
-                                                </FormattedString>
-                                            </Label.FormattedText>
-                                        </Label>
+                        <Label x:Name="ReviewDescription" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit sunt in culpa qui officia deserunt mollit anim id est laborum." TextColor="{StaticResource TertiaryColor}"/>
+                        <Label x:Name="ReviewUser" Text="Kevin V. | 20-05-2021" TextColor="{StaticResource Grey}"/>
 
-                                        <Label x:Name="ReviewDescription" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit sunt in culpa qui officia deserunt mollit anim id est laborum." TextColor="{StaticResource TertiaryColor}"/>
-                                        <Label x:Name="ReviewUser" Text="Kevin V. | 20-05-2021" TextColor="{StaticResource Grey}"/>
+                    </StackLayout>
+                </Frame>
 
-                                    </StackLayout>
-                                </Frame>
-                            <!--</StackLayout>
-                        </DataTemplate>
-                    </CarouselView.ItemTemplate>
-                </CarouselView>-->
-                
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
