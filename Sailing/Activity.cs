@@ -15,6 +15,6 @@ namespace Sailing
         public string ActivityType { get; set; }
 
         public string ActivityLocation { get; set; }
-
     }
 }
+// Specifiecaties van activity voor viewmodel.

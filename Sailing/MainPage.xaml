@@ -10,7 +10,7 @@
     <ContentPage.BindingContext>
         <ViewModel:ActivityViewModel />
     </ContentPage.BindingContext>
-
+ <!-- Je kan met bindcontext bindings introduceren voor front-end, maakt dynamische lijsten mogelijk -->
     <ContentPage.Content>
         <ScrollView>
             <StackLayout BackgroundColor="{StaticResource PrimaryColor}">

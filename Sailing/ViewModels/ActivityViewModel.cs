@@ -11,3 +11,6 @@ namespace Sailing.ViewModels
 
     }
 }
+//hiermee kan je de activiteiten dynamisch toevoegen en alle activiteiten eromheen programmeren
+// je kan lijst toevoegen tijdelijk op deze manier:
+//Activity.Add(new Activity {, Image =  });
