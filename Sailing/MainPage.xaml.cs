@@ -20,8 +20,15 @@ namespace Sailing
             collectionViewListHorizontal.ItemsSource = activityItems;
         }
 
-        private async void ActivityClicked_Tapped(object sender, EventArgs e)
+        //private async void ActivityClicked_Tapped(object sender, EventArgs e)
+        //{
+        //    SelectedActivity.activityItem = (ActivityItem)collectionViewListHorizontal.SelectedItem;
+        //    await Navigation.PushAsync(new ActivityPage());
+        //}
+
+        private async void SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            SelectedActivity.activityItem = (ActivityItem)e.CurrentSelection.FirstOrDefault();
             await Navigation.PushAsync(new ActivityPage());
         }
     }

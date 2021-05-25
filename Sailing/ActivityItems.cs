@@ -12,6 +12,7 @@ namespace Sailing
             {
                 new ActivityItem()
                 {
+                    ActivityId = 0,
                     ActivityName = "ass",
                     ActivityDesc = "ass",
                     ActivityLocation = "ass",
@@ -21,6 +22,7 @@ namespace Sailing
                 },
                 new ActivityItem()
                 {
+                    ActivityId = 1,
                     ActivityName = "ass2",
                     ActivityDesc = "ass2",
                     ActivityLocation = "ass2",
@@ -30,6 +32,7 @@ namespace Sailing
                 },
                 new ActivityItem()
                 {
+                    ActivityId = 2,
                     ActivityName = "ass3",
                     ActivityDesc = "ass3",
                     ActivityLocation = "ass3",
@@ -39,6 +42,7 @@ namespace Sailing
                 },
                 new ActivityItem()
                 {
+                    ActivityId = 3,
                     ActivityName = "ass4",
                     ActivityDesc = "ass4",
                     ActivityLocation = "ass4",

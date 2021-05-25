@@ -41,18 +41,18 @@
 
                 <Label Text="Activities in your Area:" Style="{StaticResource PageHeader}"/>
 
-                <CollectionView x:Name="collectionViewListHorizontal" >
+                <CollectionView x:Name="collectionViewListHorizontal" SelectionMode="Single" SelectionChanged="SelectionChanged">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <!--Activity Shell-->
                             <Frame BackgroundColor="#FFFFFF" CornerRadius="35" Margin="15, 0">
                                     <StackLayout x:Name="Activity" Margin="0, 15">
 
-                                        <!--Click Event-->
+                                        <!--Click Event
                                         <StackLayout.GestureRecognizers>
                                             <TapGestureRecognizer x:Name="ActivityClicked" Tapped="ActivityClicked_Tapped"/>
                                         </StackLayout.GestureRecognizers>
-                                        <!--Click Event-->
+                                        Click Event-->
 
                                         <Image x:Name="ActivityImg" Source="{Binding ActivityImage}" WidthRequest="300" HeightRequest="200"/>
 

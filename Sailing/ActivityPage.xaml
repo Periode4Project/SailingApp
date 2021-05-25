@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:sailing="clr-namespace:Sailing" x:DataType="sailing:ActivityPage" 
              x:Class="Sailing.ActivityPage">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Padding="20,0" BackgroundColor="{StaticResource PrimaryColor}">
-                <Image Source="RamseysExample" WidthRequest="300" HeightRequest="200"/>
+                <Image x:Name="ActivityImg" Source="RamseysExample" WidthRequest="300" HeightRequest="200"/>
 
-                <Label Text="Ramsey's Steakhouse" HorizontalOptions="Start" Style="{StaticResource PageHeader}"/>
+                <Label x:Name="ActivityName" Text="Ramsey's Steakhouse" HorizontalOptions="Start" Style="{StaticResource PageHeader}"/>
+                <!--<Label Text="something" HorizontalOptions="Start" Style="{StaticResource PageHeader}"/>-->
 
                 <Label FontSize="5"/>
 
@@ -39,7 +40,7 @@
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
-                                <Span Text="Enterance Fee: " />
+                                <Span Text="Entrance Fee: " />
                                 <Span x:Name="ActivityFee" Text="10"/>
                                 <Span Text="EUR"/>
                             </FormattedString.Spans>
