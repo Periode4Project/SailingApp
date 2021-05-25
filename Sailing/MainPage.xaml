@@ -46,15 +46,9 @@
                         <DataTemplate>
                             <!--Activity Shell-->
                             <Frame BackgroundColor="#FFFFFF" CornerRadius="35" Margin="15, 0">
-                                    <StackLayout x:Name="Activity" Margin="0, 15">
+                                <StackLayout x:Name="Activity" Margin="0, 15">
 
-                                        <!--Click Event
-                                        <StackLayout.GestureRecognizers>
-                                            <TapGestureRecognizer x:Name="ActivityClicked" Tapped="ActivityClicked_Tapped"/>
-                                        </StackLayout.GestureRecognizers>
-                                        Click Event-->
-
-                                        <Image x:Name="ActivityImg" Source="{Binding ActivityImage}" WidthRequest="300" HeightRequest="200"/>
+                                    <Image x:Name="ActivityImg" Source="{Binding ActivityImage}" WidthRequest="300" HeightRequest="200"/>
 
                                         <BoxView HeightRequest="1" BackgroundColor="Black"/>
 
@@ -88,7 +82,7 @@
                                             <Label.FormattedText>
                                                 <FormattedString>
                                                     <FormattedString.Spans>
-                                                        <Span Text="Enterance Fee: " />
+                                                        <Span Text="Entrance Fee: " />
                                                         <Span x:Name="ActivityFee" Text="{Binding EntranceFee}"/>
                                                         <Span Text="EUR"/>
                                                     </FormattedString.Spans>
@@ -101,8 +95,6 @@
                                     </StackLayout>
 
                                 </Frame>
-
-
 
                             <!-- Shell -->
                         </DataTemplate>
