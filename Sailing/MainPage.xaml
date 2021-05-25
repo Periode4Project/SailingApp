@@ -1,12 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:Sailing"
+             xmlns:local="clr-namespace:Sailing" xmlns:ViewModel="clr-namespace:Sailing.ViewModels"
              x:Class="Sailing.MainPage">
 
     <Shell.TitleView>
         <Image Source="FrisianSailingCompanyHeader0.png" VerticalOptions="Center" HorizontalOptions="Center"/>
     </Shell.TitleView>
+    <ContentPage.BindingContext>
+        <ViewModel:ActivityViewModel />
+    </ContentPage.BindingContext>
 
     <ContentPage.Content>
         <ScrollView>
