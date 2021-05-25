@@ -13,5 +13,10 @@ namespace Sailing
         {
             InitializeComponent();
         }
+
+        private async void ActivityClicked_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ActivityPage());
+        }
     }
 }

@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sailing.ActivityPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20,0" BackgroundColor="{StaticResource PrimaryColor}">
+                <Image Source="RamseysExample" WidthRequest="300" HeightRequest="200"/>
+
+                <Label Text="Ramsey's Steakhouse" HorizontalOptions="Start" Style="{StaticResource PageHeader}"/>
+
+                <Label FontSize="5"/>
+
+                <Label Margin="0,-12" FontSize="18" FontAttributes="Bold" TextColor="{StaticResource SecondaryColor}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Type: " />
+                                <Span x:Name="ActivityType" Text="Restaurant" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+
+                <Label FontSize="18" FontAttributes="Bold" TextColor="{StaticResource SecondaryColor}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Location: "/>
+                                <Span x:Name="ActivityLocation" Text="Heerenveen, Eau Rouge 4"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+
+                <Label  Margin="0,-12" FontSize="18"  FontAttributes="Bold" TextColor="{StaticResource SecondaryColor}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Enterance Fee: " />
+                                <Span x:Name="ActivityFee" Text="10"/>
+                                <Span Text="EUR"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label FontSize="5"/>
+
+                <Label x:Name="ActivityDescription" TextColor="{StaticResource TertiaryColor}" FontSize="18"
+                   Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Steak very Delicious"/>
+
+                <!--Review Section-->
+                <BoxView HeightRequest="1" BackgroundColor="{StaticResource SecondaryColor}"/>
+
+                <Label FontSize="24"  FontAttributes="Bold" TextColor="{StaticResource TertiaryColor}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Reviews" />
+                                <Span Text="("/>
+                                <Span x:Name="ReviewAmount" Text="1"/>
+                                <Span Text=")"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label x:Name="AverageReviews" FontSize="40"  FontAttributes="Bold" TextColor="#00FF00">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span x:Name="AverageRating" Text="8.7"/>
+                                <Span Text="/"/>
+                                <Span Text="10"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <!--All Reviews of activity in Carouselview-->
+                
+                <!--<CarouselView x:Name="ReviewSection">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>-->
+                                <!--foreach review println-->
+                                <Frame BackgroundColor="{StaticResource PrimaryColor}" BorderColor="{StaticResource TertiaryColor}">
+                                    <StackLayout>
+                                        <Label x:Name="ReviewName" Text="Incredible Restaurant!" FontSize="24" FontAttributes="Bold" TextColor="{StaticResource TertiaryColor}"/>
+
+                                        <Label x:Name="ReviewRating" FontSize="18" TextColor="#00FF00">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <FormattedString.Spans>
+                                                        <Span x:Name="UserRating" Text="8.7"/>
+                                                        <Span Text="/"/>
+                                                        <Span Text="10"/>
+                                                    </FormattedString.Spans>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+
+                                        <Label x:Name="ReviewDescription" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit sunt in culpa qui officia deserunt mollit anim id est laborum." TextColor="{StaticResource TertiaryColor}"/>
+                                        <Label x:Name="ReviewUser" Text="Kevin V. | 20-05-2021" TextColor="{StaticResource Grey}"/>
+
+                                    </StackLayout>
+                                </Frame>
+                            <!--</StackLayout>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>-->
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

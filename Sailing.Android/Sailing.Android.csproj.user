@@ -4,5 +4,6 @@
     <SelectedDevice>HUAWEI ANE-LX1</SelectedDevice>
     <ActiveDebugProfile>HUAWEI ANE-LX1</ActiveDebugProfile>
     <DefaultDevice>pixel_3a_xl_q_10_0_-_api_29</DefaultDevice>
+    <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
   </PropertyGroup>
 </Project>

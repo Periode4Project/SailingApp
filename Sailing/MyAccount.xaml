@@ -6,8 +6,13 @@
         
         <StackLayout BackgroundColor="{StaticResource PrimaryColor}">
             <Label Text="My Account" Style="{StaticResource PageHeader}" />
-        
-        
+            
+            <Label Text="You're currently not logged in. Please log in" FontSize="36" Padding="20,100,20,0" VerticalTextAlignment="Center" HorizontalOptions="Center" TextColor="{StaticResource TertiaryColor}"/>
+            <Button Text="Login" x:Name="LoginButton" Padding="20,0" Margin="20,0" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="80" TextColor="{StaticResource TertiaryColor}" BorderWidth="3" BorderColor="{StaticResource TertiaryColor}" CornerRadius="20" Clicked="LoginButton_Clicked"/>
+
+            <Label Text="No Account? No Worries!! Sign Up Now!" HorizontalOptions="Center" Padding="0,20,0,0" TextColor="{StaticResource TertiaryColor}"/>
+            <Button Text="Register" x:Name="RegisterButton" Padding="20,0"  Margin="20,0" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="50" TextColor="{StaticResource TertiaryColor}" BorderWidth="3" BorderColor="{StaticResource TertiaryColor}" CornerRadius="20" Clicked="RegisterButton_Clicked"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

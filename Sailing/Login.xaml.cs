@@ -10,22 +10,27 @@ using Xamarin.Forms.Xaml;
 namespace Sailing
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MyAccount : ContentPage
+    public partial class Login : ContentPage
     {
-        public MyAccount()
+        public Login()
         {
             InitializeComponent();
         }
 
         private async void LoginButton_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Login());
+            //Login Validation and Continue 
         }
 
         private async void RegisterButton_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Register());
 
+        }
+
+        private void ForgotPW_Clicked(object sender, EventArgs e)
+        {
+            //Make New Password
         }
     }
 }

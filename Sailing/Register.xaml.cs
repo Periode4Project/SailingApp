@@ -10,22 +10,21 @@ using Xamarin.Forms.Xaml;
 namespace Sailing
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MyAccount : ContentPage
+    public partial class Register : ContentPage
     {
-        public MyAccount()
+        public Register()
         {
             InitializeComponent();
+        }
+
+        private void CreateAccountButton_Clicked(object sender, EventArgs e)
+        {
+            //Create New Account If Not Exist
         }
 
         private async void LoginButton_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Login());
-        }
-
-        private async void RegisterButton_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Register());
-
         }
     }
 }
