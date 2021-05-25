@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:Sailing" xmlns:ViewModel="clr-namespace:Sailing.ViewModels"
+             xmlns:local="clr-namespace:Sailing"
              x:Class="Sailing.MainPage">
 
     <Shell.TitleView>
@@ -10,7 +10,7 @@
     <ContentPage.BindingContext>
         <ViewModel:ActivityViewModel />
     </ContentPage.BindingContext>
- <!-- Je kan met bindcontext bindings introduceren voor front-end, maakt dynamische lijsten mogelijk -->
+
     <ContentPage.Content>
         <ScrollView>
             <StackLayout BackgroundColor="{StaticResource PrimaryColor}">
