@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sailing.AdminPage">
+    <Shell.TitleView>
+        <Image Source="FrisianSailingCompanyHeader0.png" VerticalOptions="Center" HorizontalOptions="Center"/>
+    </Shell.TitleView>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="{StaticResource PrimaryColor}">
+
+                
+
+                <Label Text="Hello, Admin!" Style="{StaticResource PageHeader}"/>
+                <BoxView HeightRequest="1" BackgroundColor="White"/>
+                <Button Text="Manage Activities" x:Name="ActivitiesButton" Padding="20,0"  Margin="20,0" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="50" TextColor="{StaticResource TertiaryColor}" BorderWidth="3" BorderColor="{StaticResource TertiaryColor}" CornerRadius="20" Clicked="ActivitiesButton_Clicked"/>
+                <Button Text="Logout" x:Name="LogOutButton" Padding="20,0"  Margin="20,0" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="50" TextColor="{StaticResource TertiaryColor}" BorderWidth="3" BorderColor="{StaticResource TertiaryColor}" CornerRadius="20" Clicked="LogOutButton_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -27,5 +27,10 @@ namespace Sailing
             await Navigation.PushAsync(new Register());
 
         }
+        private async void AdminButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AdminPage());
+
+        }
     }
 }

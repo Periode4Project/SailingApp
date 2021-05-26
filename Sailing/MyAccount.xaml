@@ -13,6 +13,7 @@
             <Label Text="No Account? No Worries!! Sign Up Now!" HorizontalOptions="Center" Padding="0,20,0,0" TextColor="{StaticResource TertiaryColor}"/>
             <Button Text="Register" x:Name="RegisterButton" Padding="20,0"  Margin="20,0" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="50" TextColor="{StaticResource TertiaryColor}" BorderWidth="3" BorderColor="{StaticResource TertiaryColor}" CornerRadius="20" Clicked="RegisterButton_Clicked"/>
 
+            <Button Text="Admin" x:Name="AdminButton" Padding="20,0" Margin="20,0" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="80" TextColor="{StaticResource TertiaryColor}" BorderWidth="3" BorderColor="{StaticResource TertiaryColor}" CornerRadius="20" Clicked="AdminButton_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sailing.ManageActivities">
+    <Shell.TitleView>
+        <Image Source="FrisianSailingCompanyHeader0.png" VerticalOptions="Center" HorizontalOptions="Center"/>
+    </Shell.TitleView>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="{StaticResource PrimaryColor}">
+
+
+
+                <Label Text="Manage Activities:" Style="{StaticResource PageHeader}"/>
+                <BoxView HeightRequest="1" BackgroundColor="White"/>
+
+
+                <Frame BackgroundColor="#FFFFFF" CornerRadius="35" Margin="15, 0">
+                    <StackLayout x:Name="Activity">
+
+                        <!--Click Event-->
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="AddActivities" Tapped="AddActivitiesButton_Tapped"/>
+                        </StackLayout.GestureRecognizers>
+                        <!--Click Event-->
+
+                        <Image x:Name="ActivityImg" Source="Settings.png" WidthRequest="150" HeightRequest="100"/>
+
+                        <BoxView HeightRequest="1" BackgroundColor="Black"/>
+
+                        <Label x:Name="ActivityTitle" Text="Add new activity" FontSize="Title"  TextColor="Black" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+
+                       
+
+                    </StackLayout>
+
+                </Frame>
+                <Label x:Name="d" Text="Existing activities" FontSize="Title"  TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+
+                <BoxView HeightRequest="1" BackgroundColor="White"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
