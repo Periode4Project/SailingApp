@@ -83,7 +83,7 @@
                                                 <FormattedString>
                                                     <FormattedString.Spans>
                                                         <Span Text="Entrance Fee: " />
-                                                        <Span x:Name="ActivityFee" Text="{Binding EntranceFee}"/>
+                                                        <Span x:Name="ActivityFee" Text="{Binding EntranceFee, StringFormat='{0:0.00}'}"/>
                                                         <Span Text="EUR"/>
                                                     </FormattedString.Spans>
                                                 </FormattedString>
