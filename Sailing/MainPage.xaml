@@ -8,7 +8,7 @@
         <Image Source="FrisianSailingCompanyHeader0.png" VerticalOptions="Center" HorizontalOptions="Center"/>
     </Shell.TitleView>
     <ContentPage.BindingContext>
-        <ViewModel:ActivityViewModel />
+        <ActivityViewModel />
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
