@@ -1,17 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:map="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              x:Class="Sailing.Map">
     <ContentPage.Content>
-        <StackLayout>
+        <!--<StackLayout>
             <Label Text="Welcome to Xamarin.Forms!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-        
-        //linken vanuit de main page
-        //je kan locatie gewoon vinden met bindings vanuit list niet vanaf geolocation
-        //displays afhankelijk maken van gedisplayde lists
+        </StackLayout>-->
+        <Grid>
+            <map:Map MapType="Street" HasZoomEnabled="True">
+                <map:Map.ItemTemplate>
+                    <DataTemplate>
+                        <Map:Pin/>
+                    </DataTemplate>
+                </map:Map.ItemTemplate>
+            </map:Map>
+        </Grid>
         
     </ContentPage.Content>
 </ContentPage>
+    
+<!--Je kan tussen de pin een bindproperty doen en dan zou je de map moeten kunnen zien-->
+
+<!--linken vanuit de main page
+        je kan locatie gewoon vinden met bindings vanuit list niet vanaf geolocation
+        displays afhankelijk maken van gedisplayde lists-->
+        
