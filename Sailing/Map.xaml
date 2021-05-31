@@ -12,7 +12,7 @@
             <map:Map MapType="Street" HasZoomEnabled="True">
                 <map:Map.ItemTemplate>
                     <DataTemplate>
-                        <Map:Pin/>
+                        <!--<Map:Pin/>-->
                     </DataTemplate>
                 </map:Map.ItemTemplate>
             </map:Map>
