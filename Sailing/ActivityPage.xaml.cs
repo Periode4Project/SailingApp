@@ -23,5 +23,10 @@ namespace Sailing
             ActivityFee.Text = CurrentItem.EntranceFee.ToString();
             ActivityDescription.Text = CurrentItem.ActivityDesc;
         }
+
+        private async void AddReview_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AddNewReview());
+        }
     }
 }

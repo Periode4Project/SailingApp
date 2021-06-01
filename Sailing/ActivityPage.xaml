@@ -80,12 +80,21 @@
                             </Label.FormattedText>
                         </Label>
 
-                <CarouselView>
+                <!--<CarouselView>
                     <CarouselView.ItemTemplate>
                         <DataTemplate>
-                            <StackLayout>
+                            <StackLayout>-->
+                <Frame BackgroundColor="{StaticResource PrimaryColor}" BorderColor="{StaticResource TertiaryColor}">
+                    <StackLayout x:Name="AddReview">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="AddReview_Tapped"/>
+                        </StackLayout.GestureRecognizers>
+                        <Label Text="+" TextColor="{StaticResource SuccessColour}" FontSize="Header" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        <Label TextColor="{StaticResource TertiaryColor}"  HorizontalOptions="Center" VerticalOptions="Center" Text="Add New Review"/>
+                    </StackLayout>
+                </Frame>
 
-                                <Frame BackgroundColor="{StaticResource PrimaryColor}" BorderColor="{StaticResource TertiaryColor}">
+                <Frame BackgroundColor="{StaticResource PrimaryColor}" BorderColor="{StaticResource TertiaryColor}">
                                     <StackLayout>
                                         <Label x:Name="ReviewName" Text="Incredible Restaurant!" FontSize="24" FontAttributes="Bold" TextColor="{StaticResource TertiaryColor}"/>
 
@@ -107,10 +116,10 @@
                                     </StackLayout>
                                 </Frame>
                                 
-                            </StackLayout>
+                            <!--</StackLayout>
                         </DataTemplate>
                     </CarouselView.ItemTemplate>
-                </CarouselView>
+                </CarouselView>-->
 
             </StackLayout>
         </ScrollView>
