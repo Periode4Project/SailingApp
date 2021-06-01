@@ -12,7 +12,7 @@
             <Color x:Key="NavigationPrimary">#FFFFFF</Color>
             <Style x:Key="BaseStyle" TargetType="Element">
                 <Setter Property="Shell.BackgroundColor" Value="#FFFFFF"/><!--Upper Nav Bar-->
-                <Setter Property="Shell.ForegroundColor" Value="#FFFFFF" />
+                <Setter Property="Shell.ForegroundColor" Value="#505050" />
                 <Setter Property="Shell.TitleColor" Value="#2E92CB" />
                 <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
                 <Setter Property="Shell.UnselectedColor" Value="#FFFFFF" />

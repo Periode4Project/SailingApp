@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sailing.FilterResults">
+    <ContentPage.Content>
+        <StackLayout Padding="20,0" BackgroundColor="{StaticResource PrimaryColor}">
+
+            <Label Text="Sort" FontSize="20" FontAttributes="Bold" TextColor="{StaticResource TertiaryColor}" />
+
+            <Picker x:Name="SortingOptions" TextColor="{StaticResource TertiaryColor}">
+                <Picker.Items>
+                    <x:String>Sort By Name A-Z</x:String>
+                    <x:String>Sort By Name Z-A</x:String>
+                    <x:String>Sort By Entrance Fee Low-High</x:String>
+                    <x:String>Sort By Enterance Fee High-Low</x:String>
+                    <x:String>Sort By Review Score Low-High</x:String>
+                    <x:String>Sort By Review Score High-Low</x:String>
+                    <x:String>Sort By Distance Closest-Distant</x:String>
+                    <x:String>Sort By Distance Distant-Closest</x:String>
+                </Picker.Items>
+            </Picker>
+            
+            <Grid BackgroundColor="{StaticResource PrimaryColor}">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Sort By Type" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Margin="0,15
+                       ,0,0" FontSize="20" FontAttributes="Bold" TextColor="{StaticResource TertiaryColor}"/>
+
+                <CheckBox x:Name="RestaurantBox" Grid.Row="1" Grid.Column="0"/>
+                <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="0,5" FontSize="20"  Text="Restaurant"  TextColor="{StaticResource TertiaryColor}"/>
+
+                <CheckBox x:Name="ShopBox" Grid.Row="2" Grid.Column="0"/>
+                <Label Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Margin="0,5" FontSize="20"  Text="Shop"  TextColor="{StaticResource TertiaryColor}"/>
+
+                <CheckBox x:Name="MuseumBox" Grid.Row="3" Grid.Column="0"/>
+                <Label Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Margin="0,5" FontSize="20"  Text="Museum"  TextColor="{StaticResource TertiaryColor}"/>
+
+                <CheckBox x:Name="POIBox" Grid.Row="4" Grid.Column="0" />
+                <Label Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Margin="0,5" FontSize="20"  Text="Points of interest"  TextColor="{StaticResource TertiaryColor}"/>
+
+                <CheckBox x:Name="MiscBox" Grid.Row="5" Grid.Column="0"/>
+                <Label Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" Margin="0,5" FontSize="20"  Text="Misc. Activity"  TextColor="{StaticResource TertiaryColor}"/>
+
+                <Label Text="Entrance Fee" FontAttributes="Bold" FontSize="20" Margin="0,20,0,0" Grid.Row="6" Grid.ColumnSpan="4"  Grid.Column="0" TextColor="{StaticResource TertiaryColor}"/>
+                <Label Text="Set Max Price:" TextColor="{StaticResource TertiaryColor}"  Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="4" />
+
+                <Label x:Name="DisplayMaxVal" TextColor="{StaticResource TertiaryColor}" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2" Text="0"/>
+                <Label x:Name="Plus" IsVisible="False"  TextColor="{StaticResource TertiaryColor}" Grid.Row="7" Grid.Column="3" Text="+"/>
+                <Slider x:Name="MaxVal" Maximum="50" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="4" ValueChanged="MaxVal_ValueChanged" />
+
+            </Grid>
+            <BoxView BackgroundColor="{StaticResource Grey}" HeightRequest="1"/>
+            <Button x:Name="SaveFilters" BackgroundColor="{StaticResource SecondaryColor}" TextColor="{StaticResource TertiaryColor}" Text="Save Filters" Clicked="SaveFilters_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

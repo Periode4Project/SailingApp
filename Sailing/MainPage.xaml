@@ -7,8 +7,9 @@
     <Shell.TitleView>
         <Image Source="FrisianSailingCompanyHeader0.png" VerticalOptions="Center" HorizontalOptions="Center"/>
     </Shell.TitleView>
+    
     <ContentPage.BindingContext>
-        <ViewModel:ActivityViewModel />
+        <local:ActivityItems/>
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
@@ -28,18 +29,8 @@
                     <Image Source="SearchIcon.png" Grid.Column="0" WidthRequest="45" HeightRequest="45"/>
                     <Entry x:Name="SearchActivity" Grid.Column="1" Grid.ColumnSpan="3" Placeholder="Search Activity..." PlaceholderColor="#909090"/>
 
-                    <Image Source="FilterIcon.png" IsEnabled="False" Grid.Column="4" WidthRequest="45" HeightRequest="45"/>
+                    <ImageButton Source="FilterIcon.png" x:Name="FilterButton" BackgroundColor="{StaticResource TertiaryColor}" Grid.Column="4" WidthRequest="45" HeightRequest="45" Clicked="FilterButton_Clicked"/>
 
-                    <Picker x:Name="Filter"  Grid.Column="4" WidthRequest="45" HeightRequest="45">
-                        <Picker.Items>
-                            <x:String>Sort By Name</x:String>
-                            <x:String>Sort By Costs</x:String>
-                            <x:String>Sort By Type</x:String>
-                            <x:String>Sort By Rating</x:String>
-                            <x:String>Sort By Distance</x:String>
-                        </Picker.Items>
-                    </Picker>
-                    
                 </Grid>
 
                 <Label Text="Activities in your Area:" Style="{StaticResource PageHeader}"/>

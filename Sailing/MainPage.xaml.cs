@@ -26,5 +26,10 @@ namespace Sailing
             SelectedActivity.activityItem = (ActivityItem)e.CurrentSelection.FirstOrDefault();
             await Navigation.PushAsync(new ActivityPage());
         }
+
+        private async void FilterButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new FilterResults());
+        }
     }
 }

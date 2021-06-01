@@ -9,7 +9,7 @@ using Android.OS;
 
 namespace Sailing.Android
 {
-    [Activity(Label = "Frisian Sailing App", Icon = "@drawable/FrisianSailingCompany", Theme = "@style/MainTheme", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "Frisian Sailing App", Icon = "@drawable/FrisianSailingCompany", Theme = "@style/MainTheme", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, ScreenOrientation = ScreenOrientation.Portrait)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
