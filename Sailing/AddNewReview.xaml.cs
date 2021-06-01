@@ -17,6 +17,11 @@ namespace Sailing
             InitializeComponent();
         }
 
+        /// <summary>
+        /// If the necessary field(s) are/is empty(null), Display error. Otherwise, Send to DB
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void ReviewSubmit_Clicked(object sender, EventArgs e)
         {
             if ((RevTitle.Text != null) && (RevRating.Text != null) && (RevSubmitter.Text != null))

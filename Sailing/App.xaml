@@ -4,6 +4,7 @@
              x:Class="Sailing.App">
     <Application.Resources>
         <ResourceDictionary>
+            <!--All Main Colours-->
             <Color x:Key="PrimaryColor">#183270</Color>
             <Color x:Key="SecondaryColor">#2E92CB</Color>
             <Color x:Key="TertiaryColor">#FFFFFF</Color>
@@ -11,10 +12,43 @@
             <Color x:Key="NegativeColour">#d9534f</Color>
             <Color x:Key="Grey">#BBBBBB</Color>
 
+            <!--Standard Page Headers-->
             <Style x:Key="PageHeader" TargetType="Label">
                 <Setter Property="FontSize" Value="28"/>
                 <Setter Property="TextColor" Value="#FFFFFF"/>
                 <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+
+            <!--Description in ActivityPage-->
+            <Style x:Key="Description" TargetType="Label">
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="TextColor" Value="{StaticResource SecondaryColor}"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+            <!--Description in Main Menu-->
+            <Style x:Key="DescriptionSmall" TargetType="Label">
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+
+            <!--Style for filters-->
+            <Style x:Key="FilterText" TargetType="Label">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="Margin" Value="0,5"/>
+                <Setter Property="TextColor" Value="{StaticResource TertiaryColor}"/>
+            </Style>
+            
+            <!--White-Border-Button-->
+            <Style x:Key="BorderedButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}"/>
+                <Setter Property="TextColor" Value="{StaticResource TertiaryColor}"/>
+                <Setter Property="BorderColor" Value="{StaticResource TertiaryColor}"/>
+                <Setter Property="BorderWidth" Value="3"/>
+                <Setter Property="CornerRadius" Value="45"/>
+                <Setter Property="FontSize" Value="24"/>
+                <Setter Property="HeightRequest" Value="100"/>
+                <Setter Property="VerticalOptions" Value="EndAndExpand"/>
             </Style>
 
         </ResourceDictionary>

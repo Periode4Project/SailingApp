@@ -11,7 +11,7 @@
 
                 <Label FontSize="5"/>
 
-                <Label Margin="0,-12" FontSize="18" FontAttributes="Bold" TextColor="{StaticResource SecondaryColor}">
+                <Label Margin="0,-12" Style="{StaticResource Description}">
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
@@ -23,7 +23,7 @@
                 </Label>
 
 
-                <Label FontSize="18" FontAttributes="Bold" TextColor="{StaticResource SecondaryColor}">
+                <Label Style="{StaticResource Description}">
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
@@ -35,7 +35,7 @@
                 </Label>
 
 
-                <Label  Margin="0,-12" FontSize="18"  FontAttributes="Bold" TextColor="{StaticResource SecondaryColor}">
+                <Label  Margin="0,-12" Style="{StaticResource Description}">
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>

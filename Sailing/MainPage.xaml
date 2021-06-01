@@ -48,7 +48,7 @@
 
                                         <Label x:Name="ActivityTitle" Text="{Binding ActivityName}" FontSize="Title"  TextColor="Black" FontAttributes="Bold"/>
 
-                                        <Label Margin="0,-12" FontSize="16" TextColor="Black">
+                                        <Label Margin="0,-12" Style="{StaticResource DescriptionSmall}">
                                             <Label.FormattedText>
                                                 <FormattedString>
                                                     <FormattedString.Spans>
@@ -60,7 +60,7 @@
                                         </Label>
 
 
-                                        <Label FontSize="16" TextColor="Black">
+                                        <Label Style="{StaticResource DescriptionSmall}">
                                             <Label.FormattedText>
                                                 <FormattedString>
                                                     <FormattedString.Spans>
@@ -72,7 +72,7 @@
                                         </Label>
 
 
-                                        <Label  Margin="0,-12" FontSize="16" TextColor="Black">
+                                        <Label  Margin="0,-12" Style="{StaticResource DescriptionSmall}">
                                             <Label.FormattedText>
                                                 <FormattedString>
                                                     <FormattedString.Spans>
