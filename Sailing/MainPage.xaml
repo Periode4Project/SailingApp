@@ -7,9 +7,9 @@
     <Shell.TitleView>
         <Image Source="FrisianSailingCompanyHeader0.png" VerticalOptions="Center" HorizontalOptions="Center"/>
     </Shell.TitleView>
-    <ContentPage.BindingContext>
+    <!-- <ContentPage.BindingContext>
         <ViewModel:ActivityViewModel />
-    </ContentPage.BindingContext>
+    </ContentPage.BindingContext> -->
 
     <ContentPage.Content>
         <ScrollView>
@@ -74,7 +74,7 @@
                                                 <FormattedString>
                                                     <FormattedString.Spans>
                                                         <Span Text="Location: "/>
-                                                        <Span x:Name="ActivityLocation" Text="{Binding ActivityLocation}"/>
+                                                        <Span x:Name="ActivityLocation" Text="{Binding ActivityPlace.Address}"/>
                                                     </FormattedString.Spans>
                                                 </FormattedString>
                                             </Label.FormattedText>
