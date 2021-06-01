@@ -19,7 +19,7 @@
                     <x:String>Sort By Distance Distant-Closest</x:String>
                 </Picker.Items>
             </Picker>
-            
+
             <Grid BackgroundColor="{StaticResource PrimaryColor}">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
@@ -57,7 +57,7 @@
                 <CheckBox x:Name="MiscBox" Grid.Row="5" Grid.Column="0"/>
                 <Label Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" Margin="0,5" FontSize="20"  Text="Misc. Activity"  TextColor="{StaticResource TertiaryColor}"/>
 
-                <Label Text="Entrance Fee" FontAttributes="Bold" FontSize="20" Margin="0,20,0,0" Grid.Row="6" Grid.ColumnSpan="4"  Grid.Column="0" TextColor="{StaticResource TertiaryColor}"/>
+                <Label Text="Entrance Fee" FontAttributes="Bold" FontSize="20" Margin="0,15,0,0" Grid.Row="6" Grid.ColumnSpan="4"  Grid.Column="0" TextColor="{StaticResource TertiaryColor}"/>
                 <Label Text="Set Max Price:" TextColor="{StaticResource TertiaryColor}"  Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="4" />
 
                 <Label x:Name="DisplayMaxVal" TextColor="{StaticResource TertiaryColor}" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2" Text="0"/>
@@ -65,8 +65,7 @@
                 <Slider x:Name="MaxVal" Maximum="50" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="4" ValueChanged="MaxVal_ValueChanged" />
 
             </Grid>
-            <BoxView BackgroundColor="{StaticResource Grey}" HeightRequest="1"/>
-            <Button x:Name="SaveFilters" BackgroundColor="{StaticResource SecondaryColor}" TextColor="{StaticResource TertiaryColor}" Text="Save Filters" Clicked="SaveFilters_Clicked"/>
+            <Button x:Name="SaveFilters" BackgroundColor="{StaticResource SecondaryColor}" TextColor="{StaticResource TertiaryColor}" HeightRequest="60" CornerRadius="5" Text="Save Filters" Clicked="SaveFilters_Clicked"/>
 
         </StackLayout>
     </ContentPage.Content>

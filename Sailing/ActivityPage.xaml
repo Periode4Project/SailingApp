@@ -55,39 +55,24 @@
                 <!--Review Section-->
                 <BoxView HeightRequest="1" BackgroundColor="{StaticResource SecondaryColor}"/>
 
-                <Label FontSize="24"  FontAttributes="Bold" TextColor="{StaticResource TertiaryColor}">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="Reviews" />
-                                <Span Text="("/>
-                                <Span x:Name="ReviewAmount" Text="1"/>
-                                <Span Text=")"/>
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-
-                <Label x:Name="AverageReviews" FontSize="40"  FontAttributes="Bold" TextColor="#00FF00">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span x:Name="AverageRating" Text="8.7"/>
-                                <Span Text="/"/>
-                                <Span Text="10"/>
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-                <Frame BackgroundColor="{StaticResource PrimaryColor}" BorderColor="{StaticResource TertiaryColor}">
-                    <StackLayout>
-                        <Label x:Name="ReviewName" Text="Incredible Restaurant!" FontSize="24" FontAttributes="Bold" TextColor="{StaticResource TertiaryColor}"/>
-
-                        <Label x:Name="ReviewRating" FontSize="18" TextColor="#00FF00">
+                        <Label FontSize="24"  FontAttributes="Bold" TextColor="{StaticResource TertiaryColor}">
                             <Label.FormattedText>
                                 <FormattedString>
                                     <FormattedString.Spans>
-                                        <Span x:Name="UserRating" Text="8.7"/>
+                                        <Span Text="Reviews" />
+                                        <Span Text="("/>
+                                        <Span x:Name="ReviewAmount" Text="1"/>
+                                        <Span Text=")"/>
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+
+                        <Label x:Name="AverageReviews" FontSize="40"  FontAttributes="Bold" TextColor="#00FF00">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span x:Name="AverageRating" Text="8.7"/>
                                         <Span Text="/"/>
                                         <Span Text="10"/>
                                     </FormattedString.Spans>
@@ -95,11 +80,37 @@
                             </Label.FormattedText>
                         </Label>
 
-                        <Label x:Name="ReviewDescription" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit sunt in culpa qui officia deserunt mollit anim id est laborum." TextColor="{StaticResource TertiaryColor}"/>
-                        <Label x:Name="ReviewUser" Text="Kevin V. | 20-05-2021" TextColor="{StaticResource Grey}"/>
+                <CarouselView>
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
 
-                    </StackLayout>
-                </Frame>
+                                <Frame BackgroundColor="{StaticResource PrimaryColor}" BorderColor="{StaticResource TertiaryColor}">
+                                    <StackLayout>
+                                        <Label x:Name="ReviewName" Text="Incredible Restaurant!" FontSize="24" FontAttributes="Bold" TextColor="{StaticResource TertiaryColor}"/>
+
+                                        <Label x:Name="ReviewRating" FontSize="18" TextColor="#00FF00">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <FormattedString.Spans>
+                                                        <Span x:Name="UserRating" Text="8.7"/>
+                                                        <Span Text="/"/>
+                                                        <Span Text="10"/>
+                                                    </FormattedString.Spans>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+
+                                        <Label x:Name="ReviewDescription" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit sunt in culpa qui officia deserunt mollit anim id est laborum." TextColor="{StaticResource TertiaryColor}"/>
+                                        <Label x:Name="ReviewUser" Text="Kevin V. | 20-05-2021" TextColor="{StaticResource Grey}"/>
+
+                                    </StackLayout>
+                                </Frame>
+                                
+                            </StackLayout>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
 
             </StackLayout>
         </ScrollView>
