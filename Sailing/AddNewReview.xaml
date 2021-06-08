@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sailing.AddNewReview"
+             BackgroundColor="{StaticResource PrimaryColor}">
+    <ContentPage.Content >
+        <StackLayout Margin="10,0"  BackgroundColor="{StaticResource PrimaryColor}">
+            <Label Text="Activity Review" Style="{StaticResource PageHeader}"/>
+
+            <Label Text="Title:*" TextColor="{StaticResource TertiaryColor}"   />
+                <Entry x:Name="RevTitle"  TextColor="{StaticResource TertiaryColor}"   />
+
+                <Label TextColor="{StaticResource TertiaryColor}"  Text="Your Rating:*"/>
+                <Entry x:Name="RevRating" MinimumWidthRequest="20" TextColor="{StaticResource TertiaryColor}" Margin="0,0,250,0"  MaxLength="3"/>
+
+                <Label TextColor="{StaticResource TertiaryColor}"  Text="Share your experience:"/>
+                <Editor x:Name="RevExp" HeightRequest="120" TextColor="{StaticResource TertiaryColor}"  />
+
+                <Label TextColor="{StaticResource TertiaryColor}"  Text="Name*" />
+                <Entry x:Name="RevSubmitter" TextColor="{StaticResource TertiaryColor}"  />
+            
+            <Button x:Name="ReviewSubmit" CornerRadius="40" HeightRequest="100" FontSize="20"  BackgroundColor="{StaticResource SecondaryColor}" TextColor="{StaticResource TertiaryColor}" Text="Submit Review" Clicked="ReviewSubmit_Clicked"/>
+        
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

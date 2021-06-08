@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sailing.SuggestActivity">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="{StaticResource PrimaryColor}">
+            <Label Text="Suggest Activity" Style="{StaticResource PageHeader}"/>
+
+            <BoxView BackgroundColor="{StaticResource PrimaryColor}"/>
+
+            <Label Text="Port/Location:" TextColor="{StaticResource TertiaryColor}"  Margin="15,0"/>
+            <Entry x:Name="LocationInput" TextColor="{StaticResource TertiaryColor}" Margin="15,0"/>
+
+            <Label Text="Name activity:" TextColor="{StaticResource TertiaryColor}"  Margin="15,0"/>
+            <Entry x:Name="NameInput" TextColor="{StaticResource TertiaryColor}" Margin="15,0"/>
+
+            <Label TextColor="{StaticResource TertiaryColor}" Text="Additional info:"  Margin="15,0"/>
+            <Editor x:Name="InfoInput" TextColor="{StaticResource TertiaryColor}" HeightRequest="100" Margin="15,0"/>
+
+            <Button x:Name="Suggest" HeightRequest="75" TextColor="{StaticResource TertiaryColor}" Text="Suggest Activity" Margin="15,0" BackgroundColor="{StaticResource SuccessColour}" Clicked="Suggest_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -33,8 +33,8 @@
                 </Label>
             </Frame>
 
-            <Button x:Name="GetStartedButton" Text="Get Started" BackgroundColor="{StaticResource PrimaryColor}" FontSize="24" VerticalOptions="EndAndExpand" HeightRequest="100" TextColor="{StaticResource TertiaryColor}" BorderWidth="3" BorderColor="{StaticResource TertiaryColor}" CornerRadius="45" Clicked="GetStartedButton_Clicked"/>
-            <Button x:Name="SaveSettings" Text="Save Settings" BackgroundColor="{StaticResource PrimaryColor}" FontSize="24" VerticalOptions="End" HeightRequest="100" TextColor="{StaticResource TertiaryColor}" BorderWidth="3" BorderColor="{StaticResource TertiaryColor}" CornerRadius="45" Clicked="SaveSettings_Clicked"/>
+            <Button x:Name="GetStartedButton" Text="Get Started" Style="{StaticResource BorderedButton}" Clicked="GetStartedButton_Clicked"/>
+            <Button x:Name="SaveSettings" Text="Save Settings" Style="{StaticResource BorderedButton}" Clicked="SaveSettings_Clicked"/>
         
         </StackLayout>
     </ContentPage.Content>

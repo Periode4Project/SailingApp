@@ -7,10 +7,11 @@
     <Shell.TitleView>
         <Image Source="FrisianSailingCompanyHeader0.png" VerticalOptions="Center" HorizontalOptions="Center"/>
     </Shell.TitleView>
+
   
-    <!-- <ContentPage.BindingContext>
+    <ContentPage.BindingContext>
         <ViewModel:ActivityViewModel />
-    </ContentPage.BindingContext> -->
+    </ContentPage.BindingContext>
 
     <ContentPage.Content>
         <ScrollView>
@@ -29,18 +30,8 @@
                     <Image Source="SearchIcon.png" Grid.Column="0" WidthRequest="45" HeightRequest="45"/>
                     <Entry x:Name="SearchActivity" Grid.Column="1" Grid.ColumnSpan="3" Placeholder="Search Activity..." PlaceholderColor="#909090"/>
 
-                    <Image Source="FilterIcon.png" IsEnabled="False" Grid.Column="4" WidthRequest="45" HeightRequest="45"/>
+                    <ImageButton Source="FilterIcon.png" x:Name="FilterButton" BackgroundColor="{StaticResource TertiaryColor}" Grid.Column="4" WidthRequest="45" HeightRequest="45" Clicked="FilterButton_Clicked"/>
 
-                    <Picker x:Name="Filter"  Grid.Column="4" WidthRequest="45" HeightRequest="45">
-                        <Picker.Items>
-                            <x:String>Sort By Name</x:String>
-                            <x:String>Sort By Costs</x:String>
-                            <x:String>Sort By Type</x:String>
-                            <x:String>Sort By Rating</x:String>
-                            <x:String>Sort By Distance</x:String>
-                        </Picker.Items>
-                    </Picker>
-                    
                 </Grid>
 
                 <Label Text="Activities in your Area:" Style="{StaticResource PageHeader}"/>
@@ -58,7 +49,7 @@
 
                                         <Label x:Name="ActivityTitle" Text="{Binding ActivityName}" FontSize="Title"  TextColor="Black" FontAttributes="Bold"/>
 
-                                        <Label Margin="0,-12" FontSize="16" TextColor="Black">
+                                        <Label Margin="0,-12" Style="{StaticResource DescriptionSmall}">
                                             <Label.FormattedText>
                                                 <FormattedString>
                                                     <FormattedString.Spans>
@@ -70,7 +61,7 @@
                                         </Label>
 
 
-                                        <Label FontSize="16" TextColor="Black">
+                                        <Label Style="{StaticResource DescriptionSmall}">
                                             <Label.FormattedText>
                                                 <FormattedString>
                                                     <FormattedString.Spans>
@@ -82,7 +73,7 @@
                                         </Label>
 
 
-                                        <Label  Margin="0,-12" FontSize="16" TextColor="Black">
+                                        <Label  Margin="0,-12" Style="{StaticResource DescriptionSmall}">
                                             <Label.FormattedText>
                                                 <FormattedString>
                                                     <FormattedString.Spans>
