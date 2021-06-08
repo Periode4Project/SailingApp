@@ -16,6 +16,7 @@
 
         <Button Text="get city name" Clicked="Button_Clicked_1"></Button>
         <Label x:Name="cityResult"></Label>
+        <Label x:Name="distanceResult"></Label>
     </StackLayout>
 
 </ContentPage>

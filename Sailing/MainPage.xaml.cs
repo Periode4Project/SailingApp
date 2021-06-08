@@ -51,16 +51,16 @@ namespace Sailing
                 if (placemark != null)
                 {
                     var geocodeAddress =
-                        $"AdminArea:       {placemark.AdminArea}\n" +
-                        $"CountryCode:     {placemark.CountryCode}\n" +
-                        $"CountryName:     {placemark.CountryName}\n" +
-                        $"FeatureName:     {placemark.FeatureName}\n" +
+                        //$"AdminArea:       {placemark.AdminArea}\n" +
+                        //$"CountryCode:     {placemark.CountryCode}\n" +
+                        //$"CountryName:     {placemark.CountryName}\n" +
+                        //$"FeatureName:     {placemark.FeatureName}\n" +
                         $"Locality:        {placemark.Locality}\n" +
-                        $"PostalCode:      {placemark.PostalCode}\n" +
-                        $"SubAdminArea:    {placemark.SubAdminArea}\n" +
-                        $"SubLocality:     {placemark.SubLocality}\n" +
-                        $"SubThoroughfare: {placemark.SubThoroughfare}\n" +
-                        $"Thoroughfare:    {placemark.Thoroughfare}\n";
+                        $"PostalCode:      {placemark.PostalCode}\n";
+                        //$"SubAdminArea:    {placemark.SubAdminArea}\n" +
+                        //$"SubLocality:     {placemark.SubLocality}\n" +
+                        //$"SubThoroughfare: {placemark.SubThoroughfare}\n" +
+                        //$"Thoroughfare:    {placemark.Thoroughfare}\n";
 
                     Console.WriteLine(geocodeAddress);
                     cityResult.Text = geocodeAddress;
@@ -70,10 +70,25 @@ namespace Sailing
             {
                 // Feature not supported on device
             }
+            catch (FeatureNotEnabledException fneEx)
+            {
+                // Handle not enabled on device exception
+            }
+            catch (PermissionException pEx)
+            {
+                // Handle permission exception
+            }
             catch (Exception ex)
             {
                 // Handle exception that may have occurred in geocoding
             }
+
+
+            Location current = new Location(result.Latitude, result.Longitude);
+            Location sanFrancisco = new Location(37.783333, -122.416667);
+            double Kilometer = Location.CalculateDistance(current, sanFrancisco, DistanceUnits.Kilometers);
+
+            distanceResult.Text = Convert.ToString(Kilometer);
         }
     }
 }
