@@ -16,7 +16,8 @@ namespace Sailing
         public MainPage()
         {
             InitializeComponent();
-            activityItems = new List<ActivityItem>(ActivityItems.Get());
+            //activityItems = new List<ActivityItem>(ActivityItems.Get());
+            activityItems =  ApiRepositories.Activities.GetAllActivities();
             collectionViewListHorizontal.ItemsSource = activityItems;
         }
 
