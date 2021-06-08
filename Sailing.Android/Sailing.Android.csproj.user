@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <SelectedDevice>HUAWEI ANE-LX1</SelectedDevice>
-    <ActiveDebugProfile>HUAWEI ANE-LX1</ActiveDebugProfile>
-    <DefaultDevice>pixel_3a_xl_q_10_0_-_api_29</DefaultDevice>
+
+    <SelectedDevice>pixel_2_pie_9_0_-_api_28</SelectedDevice>
+    <ActiveDebugProfile>pixel_2_pie_9_0_-_api_28</ActiveDebugProfile>
+    <DefaultDevice>pixel_2_pie_9_0_-_api_28</DefaultDevice>
+
     <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
   </PropertyGroup>
 </Project>

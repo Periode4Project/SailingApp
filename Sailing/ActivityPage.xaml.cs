@@ -18,7 +18,7 @@ namespace Sailing
             ActivityItem CurrentItem = SelectedActivity.activityItem;
             ActivityImg.Source = CurrentItem.ActivityImage;
             ActivityName.Text = CurrentItem.ActivityName;
-            ActivityLocation.Text = CurrentItem.ActivityLocation;
+            ActivityLocation.Text = CurrentItem.ActivityPlace.Address;
             ActivityType.Text = CurrentItem.ActivityType;
             ActivityFee.Text = CurrentItem.EntranceFee.ToString();
             ActivityDescription.Text = CurrentItem.ActivityDesc;

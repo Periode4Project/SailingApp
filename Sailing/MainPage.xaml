@@ -7,9 +7,10 @@
     <Shell.TitleView>
         <Image Source="FrisianSailingCompanyHeader0.png" VerticalOptions="Center" HorizontalOptions="Center"/>
     </Shell.TitleView>
-    
+
+  
     <ContentPage.BindingContext>
-        <local:ActivityItems/>
+        <ViewModel:ActivityViewModel />
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
@@ -65,7 +66,7 @@
                                                 <FormattedString>
                                                     <FormattedString.Spans>
                                                         <Span Text="Location: "/>
-                                                        <Span x:Name="ActivityLocation" Text="{Binding ActivityLocation}"/>
+                                                        <Span x:Name="ActivityLocation" Text="{Binding ActivityPlace.Address}"/>
                                                     </FormattedString.Spans>
                                                 </FormattedString>
                                             </Label.FormattedText>
