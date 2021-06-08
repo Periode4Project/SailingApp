@@ -32,5 +32,10 @@ namespace Sailing
         {
             //Make New Password
         }
+
+        private async void Debug_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LoggedIn());
+        }
     }
 }
