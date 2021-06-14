@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sailing.Adminpanel">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="{StaticResource PrimaryColor}">
+            <Label Text="Adminpanel" Style="{StaticResource PageHeader}" />
+
+            <Label Text="Moderate Activities" HorizontalOptions="Center" Padding="0,20,0,0" TextColor="{StaticResource TertiaryColor}"/>
+            <Button Text="Moderate Activities" x:Name="Activitybutton" Padding="20,0"  Margin="20,0" Style="{StaticResource BorderedButton}" HeightRequest="50" Clicked="Activity_Clicked"/>
+            
+            <Label Text="Moderate Reviews" HorizontalOptions="Center" Padding="0,20,0,0" TextColor="{StaticResource TertiaryColor}"/>
+            <Button Text="Moderate Reviews" x:Name="Reviewbutton" Padding="20,0"  Margin="20,0" Style="{StaticResource BorderedButton}" HeightRequest="50" Clicked="Review_Clicked"/>
+
+            <Label Text="Go to your mailadres" HorizontalOptions="Center" Padding="0,20,0,0" TextColor="{StaticResource TertiaryColor}"/>
+            <Button Text="Go to mail" x:Name="Mailbutton" Padding="20,0"  Margin="20,0" Style="{StaticResource BorderedButton}" HeightRequest="50" Clicked="Mail_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

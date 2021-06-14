@@ -10,7 +10,7 @@
 
   
     <ContentPage.BindingContext>
-        <ViewModel:ActivityViewModel />
+        <!--<ViewModel:ActivityViewModel />-->
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
