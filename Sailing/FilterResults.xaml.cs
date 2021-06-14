@@ -17,7 +17,7 @@ namespace Sailing
             InitializeComponent();
         }
 
-
+        AdminInt boolint { get; set; }
 
         private void MaxVal_ValueChanged(object sender, ValueChangedEventArgs e)
         {
@@ -31,7 +31,7 @@ namespace Sailing
                 Plus.IsVisible = false;
             }
         }
-        
+
         private async void SaveFilters_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new MainPage());

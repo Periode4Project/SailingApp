@@ -13,6 +13,7 @@ namespace Sailing
     public partial class AdminModerateActivity : ContentPage
     {
         public List<ActivityItem> activityItems { get; set; }
+        public AdminInt boolInt { get; set; }
 
         public AdminModerateActivity()
         {
