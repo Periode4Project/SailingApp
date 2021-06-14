@@ -21,6 +21,11 @@ namespace Sailing
             await Navigation.PushAsync(new AdminModerateActivity());
         }
 
+        private async void AddActivity_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Addactivity());
+        }
+
         private async void Review_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AdminModerateReview());
