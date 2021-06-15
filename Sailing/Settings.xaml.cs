@@ -22,15 +22,17 @@ namespace Sailing
             bool result = await DisplayAlert("Confirmation","Are you sure you wish to continue?","Yes","No");
             switch (result)
             {
+
                 case true:
                     await DisplayAlert("Success","Settings succesfuly saved!","Ok");
                     break;
             }
         }
+       
 
         private void GetStartedButton_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new OnBoarding1());
         }
     }
 }

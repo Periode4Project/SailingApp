@@ -7,8 +7,8 @@
         <StackLayout BackgroundColor="{StaticResource PrimaryColor}">
             <Label Text="Login" Style="{StaticResource PageHeader}" />
 
-            <Label Text="Username:" VerticalTextAlignment="Center" TextColor="{StaticResource TertiaryColor}" FontSize="20" Margin="20,100,20,0"/>
-            <Entry x:Name="Username" TextColor="{StaticResource TertiaryColor}" Placeholder="Username..." PlaceholderColor="#BBBBBB" Margin="20,0"/>
+            <Label Text="Email:" VerticalTextAlignment="Center" TextColor="{StaticResource TertiaryColor}" FontSize="20" Margin="20,100,20,0"/>
+            <Entry x:Name="Username" TextColor="{StaticResource TertiaryColor}" Placeholder="Email" PlaceholderColor="#BBBBBB" Margin="20,0"/>
 
             <Label Text="Password:" TextColor="{StaticResource TertiaryColor}" FontSize="20" Margin="20,0"/>
             <Entry x:Name="Password" TextColor="{StaticResource TertiaryColor}" Placeholder="Password..." PlaceholderColor="#BBBBBB" IsPassword="True" Margin="20,0"/>
@@ -18,6 +18,13 @@
             <Label Text="Already have an account? Click Here!:" HorizontalOptions="Center" Padding="0,20,0,0" TextColor="{StaticResource TertiaryColor}"/>
             <Button Text="Register" x:Name="RegisterButton" Padding="20,0"  Margin="20,0" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="50" TextColor="{StaticResource TertiaryColor}" BorderWidth="3" BorderColor="{StaticResource TertiaryColor}" CornerRadius="20" Clicked="RegisterButton_Clicked" />
 
+<<<<<<< Updated upstream
+=======
+            <Button x:Name="Debug" Clicked="Debug_Clicked"/>
+            
+            
+
+>>>>>>> Stashed changes
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
