@@ -39,7 +39,7 @@
             <Label TextColor="{StaticResource TertiaryColor}"  Text="Longitude*"/>
             <Entry x:Name="ALong" TextColor="{StaticResource TertiaryColor}" Text=" " />
 
-            <Button x:Name="ReviewSubmit" CornerRadius="40" HeightRequest="100" FontSize="20"  BackgroundColor="{StaticResource SecondaryColor}" TextColor="{StaticResource TertiaryColor}" Text="Submit Activity" Clicked="ReviewSubmit_Clicked"/>
+            <Button x:Name="ReviewSubmit" CornerRadius="40" HeightRequest="100" FontSize="20"  BackgroundColor="{StaticResource SecondaryColor}" TextColor="{StaticResource TertiaryColor}" Text="Submit Activity" Clicked="AddActivity_Clicked"/>
 
         </StackLayout>
         </ScrollView>
