@@ -10,6 +10,15 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Compile Remove="NewFolder1\**" />
+      <Compile Remove="NewFolder\**" />
+      <EmbeddedResource Remove="NewFolder1\**" />
+      <EmbeddedResource Remove="NewFolder\**" />
+      <None Remove="NewFolder1\**" />
+      <None Remove="NewFolder\**" />
+    </ItemGroup>
+
+    <ItemGroup>
         <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
         <PackageReference Include="Xamarin.Forms" Version="4.8.0.1821" />
         <PackageReference Include="Xamarin.Forms.Maps" Version="4.8.0.1821" />
@@ -61,5 +70,9 @@
       <EmbeddedResource Update="SuggestActivity.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="NewFolder2\" />
     </ItemGroup>
 </Project>
