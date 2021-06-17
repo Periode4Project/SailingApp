@@ -32,5 +32,14 @@ namespace Sailing
         {
             await Navigation.PushAsync(new FilterResults());
         }
+
+        private async void Edit_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Editactivity());
+        }
+        private async void Delete_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AdminModerateActivity());
+        }
     }
 }

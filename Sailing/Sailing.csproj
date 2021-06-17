@@ -10,10 +10,13 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Compile Remove="images\**" />
       <Compile Remove="NewFolder1\**" />
       <Compile Remove="NewFolder\**" />
+      <EmbeddedResource Remove="images\**" />
       <EmbeddedResource Remove="NewFolder1\**" />
       <EmbeddedResource Remove="NewFolder\**" />
+      <None Remove="images\**" />
       <None Remove="NewFolder1\**" />
       <None Remove="NewFolder\**" />
     </ItemGroup>
@@ -44,6 +47,9 @@
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
       <EmbeddedResource Update="AppShell.xaml">
+        <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Editactivity.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
       <EmbeddedResource Update="FilterResults.xaml">

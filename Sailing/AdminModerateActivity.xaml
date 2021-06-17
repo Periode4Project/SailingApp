@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout BackgroundColor="{StaticResource PrimaryColor}">
-
+                
                 <Grid BackgroundColor="{StaticResource TertiaryColor}">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
@@ -26,24 +26,30 @@
                 <Label Text="Current Activities:" Style="{StaticResource PageHeader}"/>
 
                 <CollectionView x:Name="collectionViewListHorizontal" SelectionMode="Single" SelectionChanged="SelectionChanged">
+                    
+                    
                     <CollectionView.ItemTemplate>
+                        
+                        
                         <DataTemplate>
                             <!--Activity Shell-->
+
                             <Frame BackgroundColor="#FFFFFF" CornerRadius="35" Margin="15, 0">
 
 
                                 <StackLayout x:Name="Activity" Margin="0, 15">
 
-                                    <ImageButton Source="images\edit.png"
+                                    <ImageButton Clicked="Edit_Clicked"
+                                     Source="edit.png"
                                      x:Name="Edit"
                                      HorizontalOptions="Start"
-                                     VerticalOptions="Start" />
+                                     VerticalOptions="Start" WidthRequest="30"  HeightRequest="30" />
 
                                     <ImageButton Source="trashcan.png"
+                                     Clicked="Delete_Clicked"
                                      x:Name="Delete"
                                      HorizontalOptions="End"
-                                     VerticalOptions="End" />
-                                    
+                                     VerticalOptions="End" WidthRequest="30"  HeightRequest="30" />
 
                                     <BoxView HeightRequest="1" BackgroundColor="Black"/>
 

@@ -10,15 +10,15 @@ using Xamarin.Forms.Xaml;
 namespace Sailing
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Addactivity : ContentPage
+    public partial class Editactivity : ContentPage
     {
-        public Addactivity()
+        public Editactivity()
         {
             InitializeComponent();
         }
         private async void AddActivity_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Adminpanel());
+            await Navigation.PushAsync(new AdminModerateActivity());
         }
     }
 }

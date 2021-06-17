@@ -25,7 +25,7 @@
             <Entry x:Name="AFee" TextColor="{StaticResource TertiaryColor}" Text=" " />
 
             <Label TextColor="{StaticResource TertiaryColor}"  Text="Location"/>
-            <Label TextColor="{StaticResource TertiaryColor}"  Text="Since it's a location tracking app you need to fill in the precise name of the City, adres and langitude/longitude coordinates, please be accurate to prevent errors"/>
+                <Label TextColor="{StaticResource TertiaryColor}"  Text="The langitude and longitude (exact location) is determined based on cityname and adress, please be accurate"/>
 
             <Label TextColor="{StaticResource TertiaryColor}"  Text="Cityname*"/>
             <Entry x:Name="ACity" TextColor="{StaticResource TertiaryColor}" Text=" " />
@@ -33,11 +33,11 @@
             <Label TextColor="{StaticResource TertiaryColor}"  Text="Adress*"/>
             <Entry x:Name="AAdress" TextColor="{StaticResource TertiaryColor}" Text=" " />
 
-            <Label TextColor="{StaticResource TertiaryColor}"  Text="Lattitude*"/>
+            <!--<Label TextColor="{StaticResource TertiaryColor}"  Text="Lattitude*"/>
             <Entry x:Name="ALot" TextColor="{StaticResource TertiaryColor}" Text=" " />
 
             <Label TextColor="{StaticResource TertiaryColor}"  Text="Longitude*"/>
-            <Entry x:Name="ALong" TextColor="{StaticResource TertiaryColor}" Text=" " />
+            <Entry x:Name="ALong" TextColor="{StaticResource TertiaryColor}" Text=" " />-->
 
             <Button x:Name="ReviewSubmit" CornerRadius="40" HeightRequest="100" FontSize="20"  BackgroundColor="{StaticResource SecondaryColor}" TextColor="{StaticResource TertiaryColor}" Text="Submit Activity" Clicked="AddActivity_Clicked"/>
 
