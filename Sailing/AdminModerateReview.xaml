@@ -3,10 +3,37 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Sailing.AdminModerateReview">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout Padding="20,0" BackgroundColor="{StaticResource PrimaryColor}">
+                <Frame BackgroundColor="{StaticResource PrimaryColor}" BorderColor="{StaticResource TertiaryColor}">
+                    <StackLayout>
+                        <ImageButton Source="trashcan.png"
+                                     Clicked="Delete_Clicked"
+                                     x:Name="Delete"
+                                     HorizontalOptions="End"
+                                     VerticalOptions="End" WidthRequest="30"  HeightRequest="30" BackgroundColor="Transparent" />
+                        <Label x:Name="ReviewName" Text="Incredible Restaurant!" FontSize="24" FontAttributes="Bold" TextColor="{StaticResource TertiaryColor}"/>
+
+                        <Label x:Name="ReviewRating" FontSize="18" TextColor="#00FF00">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span x:Name="UserRating" Text="8.7"/>
+                                        <Span Text="/"/>
+                                        <Span Text="10"/>
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+
+                        <Label x:Name="ReviewDescription" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit sunt in culpa qui officia deserunt mollit anim id est laborum." TextColor="{StaticResource TertiaryColor}"/>
+                        <Label x:Name="ReviewUser" Text="Kevin V. | 20-05-2021" TextColor="{StaticResource Grey}"/>
+
+                    </StackLayout>
+                </Frame>
+
+
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

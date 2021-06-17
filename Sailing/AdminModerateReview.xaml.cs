@@ -15,6 +15,11 @@ namespace Sailing
         public AdminModerateReview()
         {
             InitializeComponent();
+            ActivityItem CurrentItem = SelectedActivity.activityItem;
+        }
+        private async void Delete_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AdminModerateReview());
         }
     }
 }
