@@ -5,9 +5,10 @@
     
     <ContentPage.Content>
         <StackLayout BackgroundColor="{StaticResource PrimaryColor}">
+            <!--Welcome greeting-->
             <Label Text="Welcome, User!"  FontSize="25" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource TertiaryColor}"/>
             <BoxView HeightRequest="1" BackgroundColor="{StaticResource TertiaryColor}"/>
-
+            <!--Options for the user-->
             <Button x:Name="Suggestion" BackgroundColor="{StaticResource SuccessColour}" Text="Suggest Activity" Clicked="Suggestion_Clicked"/>
             <Button x:Name="LoggingOut" BackgroundColor="{StaticResource NegativeColour}" Text="Log Out" Clicked="LoggingOut_Clicked"/>
 
