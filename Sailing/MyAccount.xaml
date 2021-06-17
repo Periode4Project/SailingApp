@@ -5,11 +5,12 @@
     <ContentPage.Content>
         
         <StackLayout BackgroundColor="{StaticResource PrimaryColor}">
+            <!--Head-->
             <Label Text="My Account" Style="{StaticResource PageHeader}" />
-            
+            <!--Login option-->
             <Label Text="You're currently not logged in. Please log in" FontSize="36" Padding="20,100,20,0" VerticalTextAlignment="Center" HorizontalOptions="Center" TextColor="{StaticResource TertiaryColor}"/>
             <Button Text="Login" x:Name="LoginButton" Padding="20,0" Margin="20,0" Style="{StaticResource BorderedButton}" Clicked="LoginButton_Clicked"/>
-
+             <!--Register option-->
             <Label Text="No Account? No Worries!! Sign Up Now!" HorizontalOptions="Center" Padding="0,20,0,0" TextColor="{StaticResource TertiaryColor}"/>
             <Button Text="Register" x:Name="RegisterButton" Padding="20,0"  Margin="20,0" Style="{StaticResource BorderedButton}" HeightRequest="50" Clicked="RegisterButton_Clicked"/>
 
