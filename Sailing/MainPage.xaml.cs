@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Essentials;
 
+
 namespace Sailing
 {
     public partial class MainPage : ContentPage
     {
         bool isGettingLocation;
+        LocationClass LocationClass = new LocationClass();
 
         public MainPage()
         {
@@ -38,57 +40,19 @@ namespace Sailing
 
         async void Button_Clicked_1(object sender, EventArgs e)
         {
-            var result = await Geolocation.GetLocationAsync(new GeolocationRequest(GeolocationAccuracy.Default, TimeSpan.FromMinutes(1)));
 
-            try
-            {
-                var lat = result.Latitude;
-                var lon = result.Longitude;
+            cityResult.Text = await LocationClass.GetLocation();
+            double Distance = await LocationClass.GetDistance();
+            distanceResult.Text = Distance.ToString(); 
 
-                var placemarks = await Geocoding.GetPlacemarksAsync(lat, lon);
-
-                var placemark = placemarks?.FirstOrDefault();
-                if (placemark != null)
-                {
-                    var geocodeAddress =
-                        //$"AdminArea:       {placemark.AdminArea}\n" +
-                        //$"CountryCode:     {placemark.CountryCode}\n" +
-                        //$"CountryName:     {placemark.CountryName}\n" +
-                        //$"FeatureName:     {placemark.FeatureName}\n" +
-                        $"Locality:        {placemark.Locality}\n" +
-                        $"PostalCode:      {placemark.PostalCode}\n";
-                        //$"SubAdminArea:    {placemark.SubAdminArea}\n" +
-                        //$"SubLocality:     {placemark.SubLocality}\n" +
-                        //$"SubThoroughfare: {placemark.SubThoroughfare}\n" +
-                        //$"Thoroughfare:    {placemark.Thoroughfare}\n";
-
-                    Console.WriteLine(geocodeAddress);
-                    cityResult.Text = geocodeAddress;
-                }
-            }
-            catch (FeatureNotSupportedException fnsEx)
-            {
-                // Feature not supported on device
-            }
-            catch (FeatureNotEnabledException fneEx)
-            {
-                // Handle not enabled on device exception
-            }
-            catch (PermissionException pEx)
-            {
-                // Handle permission exception
-            }
-            catch (Exception ex)
-            {
-                // Handle exception that may have occurred in geocoding
-            }
+            
 
 
-            Location current = new Location(result.Latitude, result.Longitude);
-            Location sanFrancisco = new Location(37.783333, -122.416667);
-            double Kilometer = Location.CalculateDistance(current, sanFrancisco, DistanceUnits.Kilometers);
+            //Location current = new Location(result.Latitude, result.Longitude);
+            //Location sanFrancisco = new Location(37.783333, -122.416667);
+            //double Kilometer = Location.CalculateDistance(current, sanFrancisco, DistanceUnits.Kilometers);
 
-            distanceResult.Text = Convert.ToString(Kilometer);
+            //distanceResult.Text = Convert.ToString(Kilometer);
         }
     }
 }
