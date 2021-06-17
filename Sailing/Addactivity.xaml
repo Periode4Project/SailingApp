@@ -5,6 +5,7 @@
 
     <ContentPage.Content >
         <ScrollView>
+            <!-- alle inputvelden worden  op 1 overgenomen van activityitem - lattitude en longitude, volgorde iets anders voor gebruikersgemak-->
             <StackLayout Margin="10,0"  BackgroundColor="{StaticResource PrimaryColor}">
             <Label Text="Add a new activity" Style="{StaticResource PageHeader}"/>
             

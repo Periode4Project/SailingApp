@@ -4,6 +4,7 @@
              x:Class="Sailing.Editactivity">
     <ContentPage.Content >
         <ScrollView>
+            <!-- De tekstvelden zijn leeg gelaten zodat je wat er bij de activiteit staat erin kan coderen zodat monique het makkelijker kan aanpassen-->
             <StackLayout Margin="10,0"  BackgroundColor="{StaticResource PrimaryColor}">
                 <Label Text="Edit activity" Style="{StaticResource PageHeader}"/>
 

@@ -23,3 +23,5 @@ namespace Sailing
         }
     }
 }
+// pagina wordt herladen wanneer review verwijderd wordt
+// Reviews kunnen beter alleen verwijderd te worden

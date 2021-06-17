@@ -35,6 +35,7 @@ namespace Sailing
         {
             string url = "https://mail.google.com/";
             await Launcher.OpenAsync(new Uri(url));
+            //brengt je uit de app en naar de gmail website
         }
     }
 }

@@ -15,6 +15,7 @@
 
             <Label Text="Temporary admin panel link" HorizontalOptions="Center" Padding="0,20,0,0" TextColor="{StaticResource TertiaryColor}"/>
             <Button Text="Admin page" x:Name="Adminbutton" Padding="20,0"  Margin="20,0" Style="{StaticResource BorderedButton}" HeightRequest="50" Clicked="Admin_Clicked"/>
+            <!-- tijdelijke directe toegang naar het adminpanel, verstandig om later te verwijderen wanneer adminaccounts bestaan-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

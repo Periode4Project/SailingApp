@@ -4,6 +4,8 @@
              x:Class="Sailing.AdminModerateReview">
     <ContentPage.Content>
         <ScrollView>
+            <!-- Het beste kan je er een lijst van maken waar de laatste reviews eerst komen zo kan Monique vanaf boven moderaten -->
+            <!-- dit is allemaal hardcode de review maar je kan template behouden en bindings doen en ook het inferieure klasse maken aan activiteit, zo kan je ook zien aan welke activiteit reviews gekoppeld zijn maar dat is maar mijn tip-->
             <StackLayout Padding="20,0" BackgroundColor="{StaticResource PrimaryColor}">
                 <Frame BackgroundColor="{StaticResource PrimaryColor}" BorderColor="{StaticResource TertiaryColor}">
                     <StackLayout>
