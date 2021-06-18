@@ -11,12 +11,14 @@ namespace Sailing
     {
         public async Task<string> GetLocation() 
         {
-            //result bevat de latitude en longitude opgehaald door de gps 
-            Location result = await GetCoordinates();
-            //de Location in activityitem is aangepast naar Locations om verwaring met de gps location tegen te gaan
+            
 
             try
             {
+                //result bevat de latitude en longitude opgehaald door de gps 
+                Location result = await GetCoordinates();
+                //de Location in activityitem is aangepast naar Locations om verwaring met de gps location tegen te gaan
+
                 var lat = result.Latitude;
                 var lon = result.Longitude;
 

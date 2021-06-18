@@ -33,12 +33,28 @@ namespace Sailing
 
         private void GetStartedButton_Clicked(object sender, EventArgs e)
         {
-
+            
         }
 
         private async void SetLocation()
-        { 
-            GPSLocation.Text = await locationClass.GetLocation();
+        {
+            string LocationText = await locationClass.GetLocation();
+
+            switch (LocationText)
+            {
+                case "Please enable GPS":
+                    await DisplayAlert("Alert", "Please turn on GPS", "OK");
+                    //voor nu wacht hij 10 seconden en probeert het weer
+                    await Task.Delay(10 * 1000);
+                    SetLocation();
+                    break;
+
+                default:
+                    GPSLocation.Text = LocationText;
+                    break;
+            }
+
+            
         }
     }
 }
