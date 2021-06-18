@@ -12,9 +12,12 @@ namespace Sailing
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Settings : ContentPage
     {
+        LocationClass locationClass = new LocationClass();
+
         public Settings()
         {
             InitializeComponent();
+            SetLocation();
         }
 
         private async void SaveSettings_Clicked(object sender, EventArgs e)
@@ -31,6 +34,11 @@ namespace Sailing
         private void GetStartedButton_Clicked(object sender, EventArgs e)
         {
 
+        }
+
+        private async void SetLocation()
+        { 
+            GPSLocation.Text = await locationClass.GetLocation();
         }
     }
 }

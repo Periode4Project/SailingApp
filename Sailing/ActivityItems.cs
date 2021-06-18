@@ -19,7 +19,7 @@ namespace Sailing
                     {
                         City = "Heerenveen",
                         Address = "Pim Mulierlaan 51, 8443 DA Heerenveen",
-                        Location = new Location()
+                        Location = new Locations()
                         {
                             lat = 0,
                             lng = 0
@@ -38,7 +38,7 @@ namespace Sailing
                     {
                         City = "Heerenveen",
                         Address = "Gemeenteplein 59, 8442 MB Heerenveen",
-                        Location = new Location()
+                        Location = new Locations()
                         {
                             lat = 0,
                             lng = 0
