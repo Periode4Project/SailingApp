@@ -9,9 +9,6 @@
     </Shell.TitleView>
 
   
-    <ContentPage.BindingContext>
-        <ViewModel:ActivityViewModel />
-    </ContentPage.BindingContext>
 
     <ContentPage.Content>
         <ScrollView>
