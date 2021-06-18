@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sailing.AdminModerateReview">
+    <ContentPage.Content>
+        <ScrollView>
+            <!-- Het beste kan je er een lijst van maken waar de laatste reviews eerst komen zo kan Monique vanaf boven moderaten -->
+            <!-- dit is allemaal hardcode de review maar je kan template behouden en bindings doen en ook het inferieure klasse maken aan activiteit, zo kan je ook zien aan welke activiteit reviews gekoppeld zijn maar dat is maar mijn tip-->
+            <StackLayout Padding="20,0" BackgroundColor="{StaticResource PrimaryColor}">
+                <Frame BackgroundColor="{StaticResource PrimaryColor}" BorderColor="{StaticResource TertiaryColor}">
+                    <StackLayout>
+                        <ImageButton Source="trashcan.png"
+                                     Clicked="Delete_Clicked"
+                                     x:Name="Delete"
+                                     HorizontalOptions="End"
+                                     VerticalOptions="End" WidthRequest="30"  HeightRequest="30" BackgroundColor="Transparent" />
+                        <Label x:Name="ReviewName" Text="Incredible Restaurant!" FontSize="24" FontAttributes="Bold" TextColor="{StaticResource TertiaryColor}"/>
+
+                        <Label x:Name="ReviewRating" FontSize="18" TextColor="#00FF00">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span x:Name="UserRating" Text="8.7"/>
+                                        <Span Text="/"/>
+                                        <Span Text="10"/>
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+
+                        <Label x:Name="ReviewDescription" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit sunt in culpa qui officia deserunt mollit anim id est laborum." TextColor="{StaticResource TertiaryColor}"/>
+                        <Label x:Name="ReviewUser" Text="Kevin V. | 20-05-2021" TextColor="{StaticResource Grey}"/>
+
+                    </StackLayout>
+                </Frame>
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

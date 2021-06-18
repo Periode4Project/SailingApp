@@ -17,7 +17,7 @@ namespace Sailing
             InitializeComponent();
         }
 
-
+        AdminInt boolint { get; set; }
 
         private void MaxVal_ValueChanged(object sender, ValueChangedEventArgs e)
         {
@@ -31,10 +31,11 @@ namespace Sailing
                 Plus.IsVisible = false;
             }
         }
-        
+
         private async void SaveFilters_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new MainPage());
+            //dit is voor zowel vanuit de mainpage komen als uit de adminmoderateactivity komen dus hier moeten nog wat extra lijnen bijkomen zodat je naar goede pagina terugkomt met een of ander if statement.
         }
     }
 }
