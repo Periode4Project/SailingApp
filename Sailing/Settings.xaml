@@ -26,7 +26,7 @@
                         <FormattedString>
                             <FormattedString.Spans>
                                 <Span Text="Location: "/>
-                                <Span x:Name="GPSLocation" Text="Heerenveen"/>
+                                <Span x:Name="GPSLocation" Text="Getting location"/>
                             </FormattedString.Spans>
                         </FormattedString>
                     </Label.FormattedText>
