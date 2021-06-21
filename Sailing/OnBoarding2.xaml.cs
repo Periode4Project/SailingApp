@@ -10,12 +10,18 @@ using Xamarin.Forms.Xaml;
 namespace Sailing
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class OnBoarding1 : ContentPage
+    public partial class OnBoarding2 : ContentPage
     {
-        public OnBoarding1()
+        public OnBoarding2()
         {
             InitializeComponent();
         }
+        private async void PrevButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new OnBoarding1());
+
+        }
+
         private async void SkipButton_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new MainPage());
@@ -23,7 +29,7 @@ namespace Sailing
         }
         private async void NextButton_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new OnBoarding2());
+            await Navigation.PushAsync(new OnBoarding3());
 
         }
     }

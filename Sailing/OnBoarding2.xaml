@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sailing.OnBoarding2">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#2E92CB">
+
+
+            <Label Text="Discover new activities!" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="0,20,0,0" FontSize="35" TextColor="{StaticResource TertiaryColor}"/>
+
+            <Grid>
+                <Button x:Name="Prev" Text="Prev" HorizontalOptions="Start" VerticalOptions="End" TextColor="{StaticResource TertiaryColor}" FontSize="26" BackgroundColor="#2E92CB" Margin="20,0" Clicked="PrevButton_Clicked"/>
+                <Button x:Name="Skip" Text="Skip" HorizontalOptions="Center" VerticalOptions="End" TextColor="{StaticResource TertiaryColor}" FontSize="26" BackgroundColor="#2E92CB" Margin="20,0" Clicked="SkipButton_Clicked"/>
+                <Button x:Name="Next" Text="Next" HorizontalOptions="End" VerticalOptions="End" TextColor="{StaticResource TertiaryColor}" FontSize="26" BackgroundColor="#2E92CB" Margin="20,0" Clicked="NextButton_Clicked"/>
+                
+                    
+                   
+                
+            </Grid>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
