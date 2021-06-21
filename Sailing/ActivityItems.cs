@@ -1,54 +1,57 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Net.Http;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Sailing
 {
     public class ActivityItems
     {
-        public static IEnumerable<ActivityItem> Get()
+        public static async Task<List<ActivityItem>> GetAsync()
         {
-            return new List<ActivityItem>
+            try
             {
-                new ActivityItem()
+                string url = @"http://64.40.9.86:25832/Activities/GetAll";
+                HttpClient client = new HttpClient();
+                client.DefaultRequestHeaders.Add("Accept", "application/json");
+                HttpResponseMessage response = await client.GetAsync(url);
+                response.EnsureSuccessStatusCode();
+                return JsonConvert.DeserializeObject<List<ActivityItem>>(await response.Content.ReadAsStringAsync());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return new List<ActivityItem>
                 {
-                    ActivityId = 0,
-                    ActivityName = "Ballorig",
-                    ActivityDesc = "Overdekt spelen, springen, klimmen, klauteren, kruipen en glijden. Slecht weer buiten? Kom dan lekker binnen spelen bij de overdekte speeltuinen van Ballorig. Vanaf 1996 is Ballorig het eerste en leukste indoor speelparadijs van Nederland en Duitsland! Kinderen van 0 t/m 12 jaar kunnen in 38 vestigingen in Nederland en 4 in Duitsland, terecht voor het allerleukste dagje uit. Omdat kinderspeelparadijs Ballorig speciaal voor kinderen is, betalen ouders en begeleiders geen entree. Bovendien is Ballorig ideaal voor kinderfeestjes!",
-                    ActivityPlace = new Place()
+                    new ActivityItem
                     {
-                        City = "Heerenveen",
-                        Address = "Pim Mulierlaan 51, 8443 DA Heerenveen",
-                        Location = new Locations()
+                        ActivityId = 0,
+                        ActivityName = "Error",
+                        ActivityDesc = e.Message,
+                        ActivityImage = "https://www.pasadenalawgroup.com/wp-content/uploads/2018/11/ThinkstockPhotos-627455048-1.jpg",
+                        ActivityPlace = new Place
                         {
-                            lat = 0,
-                            lng = 0
-                        }
-                    },
-                    ActivityImage = "https://www.ballorig.nl/media/4806/ballorig-logo-png.png?width=340&height=140&mode=crop&center=0.50%2c0.50",
-                    ActivityType = "Indoor Speeltuin",
-                    EntranceFee = 8.50F
-                },
-                new ActivityItem()
-                {
-                    ActivityId = 1,
-                    ActivityName = "La Fontaine",
-                    ActivityDesc = "Lekker eten en drinken in hartje centrum van Heerenveen? Dan mag u Restaurant & Lunchroom La Fontaine niet missen! Al meer dan 25 jaar lang een vertrouwd adres voor uw lunch, diner, catering of feest. Passie voor heerlijk eten en drinken garandeert een culinair hoogtepunt van uw bezoek aan Heerenveen. Daarnaast beschikt La Fontaine tevens over een uniek kinderrestaurant. Gezellig uit eten met de kinderen in hun eigen restaurant!",
-                    ActivityPlace = new Place()
-                    {
-                        City = "Heerenveen",
-                        Address = "Gemeenteplein 59, 8442 MB Heerenveen",
-                        Location = new Locations()
-                        {
-                            lat = 0,
-                            lng = 0
-                        }
-                    },
-                    ActivityImage = "https://i.imgur.com/ElYZn0k.png",
-                    ActivityType = "Restaurant",
-                    EntranceFee = 0
-                }
-            };
+                            Address = "error",
+                            City = "error",
+                            Location = new Locations
+                            {
+                                lat = 0,
+                                lng = 0
+                            }
+                        },
+                        ActivityType = "error",
+                        EntranceFee = 0
+                    }
+                };
+            }
+            
+        }
+
+        public static List<ActivityItem> Get()
+        {
+            return GetAsync().Result;
         }
     }
 }
