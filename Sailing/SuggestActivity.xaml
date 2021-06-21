@@ -4,19 +4,20 @@
              x:Class="Sailing.SuggestActivity">
     <ContentPage.Content>
         <StackLayout BackgroundColor="{StaticResource PrimaryColor}">
+            <!--Head-->
             <Label Text="Suggest Activity" Style="{StaticResource PageHeader}"/>
 
             <BoxView BackgroundColor="{StaticResource PrimaryColor}"/>
-
+            <!--Location (input)-->
             <Label Text="Port/Location:" TextColor="{StaticResource TertiaryColor}"  Margin="15,0"/>
             <Entry x:Name="LocationInput" TextColor="{StaticResource TertiaryColor}" Margin="15,0"/>
-
+            <!--Name activity-->
             <Label Text="Name activity:" TextColor="{StaticResource TertiaryColor}"  Margin="15,0"/>
             <Entry x:Name="NameInput" TextColor="{StaticResource TertiaryColor}" Margin="15,0"/>
-
+            <!--Description and additional info-->
             <Label TextColor="{StaticResource TertiaryColor}" Text="Additional info:"  Margin="15,0"/>
             <Editor x:Name="InfoInput" TextColor="{StaticResource TertiaryColor}" HeightRequest="100" Margin="15,0"/>
-
+            <!--Suggest (send) button-->
             <Button x:Name="Suggest" HeightRequest="75" TextColor="{StaticResource TertiaryColor}" Text="Suggest Activity" Margin="15,0" BackgroundColor="{StaticResource SuccessColour}" Clicked="Suggest_Clicked"/>
         </StackLayout>
     </ContentPage.Content>

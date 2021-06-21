@@ -9,11 +9,10 @@
     </Shell.TitleView>
     
   
-
     <ContentPage.Content>
         <ScrollView>
             <StackLayout BackgroundColor="{StaticResource PrimaryColor}">
-
+                <!--Search Bar-->
                 <Grid BackgroundColor="{StaticResource TertiaryColor}">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
@@ -26,11 +25,11 @@
                     </Grid.ColumnDefinitions>
                     <Image Source="SearchIcon.png" Grid.Column="0" WidthRequest="45" HeightRequest="45"/>
                     <Entry x:Name="SearchActivity" Grid.Column="1" Grid.ColumnSpan="3" Placeholder="Search Activity..." PlaceholderColor="#909090"/>
-
+                    <!-- Button for filtering results-->
                     <ImageButton Source="FilterIcon.png" x:Name="FilterButton" BackgroundColor="{StaticResource TertiaryColor}" Grid.Column="4" WidthRequest="45" HeightRequest="45" Clicked="FilterButton_Clicked"/>
 
                 </Grid>
-
+                <!--Here starts the (filtered) activities list-->
                 <Label Text="Activities in your Area:" Style="{StaticResource PageHeader}"/>
 
                 <CollectionView x:Name="collectionViewListHorizontal" SelectionMode="Single" SelectionChanged="SelectionChanged">
@@ -45,7 +44,8 @@
                                         <BoxView HeightRequest="1" BackgroundColor="Black"/>
 
                                         <Label x:Name="ActivityTitle" Text="{Binding ActivityName}" FontSize="Title"  TextColor="Black" FontAttributes="Bold"/>
-
+                                         
+                                        <!--Type of the activity-->
                                         <Label Margin="0,-12" Style="{StaticResource DescriptionSmall}">
                                             <Label.FormattedText>
                                                 <FormattedString>
@@ -57,7 +57,7 @@
                                             </Label.FormattedText>
                                         </Label>
 
-
+                                        <!--Location of the activity-->
                                         <Label Style="{StaticResource DescriptionSmall}">
                                             <Label.FormattedText>
                                                 <FormattedString>
@@ -69,7 +69,7 @@
                                             </Label.FormattedText>
                                         </Label>
 
-
+                                         <!--Entrance fee for the activity-->
                                         <Label  Margin="0,-12" Style="{StaticResource DescriptionSmall}">
                                             <Label.FormattedText>
                                                 <FormattedString>
