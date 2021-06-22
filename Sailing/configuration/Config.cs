@@ -11,8 +11,11 @@ namespace Sailing
         public static User User { get; set; }
         public static bool FirstStartup { get; set; }
         public static string Language { get; set; }
+
         static Config()
         {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            string filename = Path.Combine(path, "config.json");
             User = new User
             {
                 Email = null,
@@ -25,11 +28,10 @@ namespace Sailing
                 Language = Language
             };
             FirstStartup = false;
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            string filename = Path.Combine(path, "config.json");
+            
             if (!File.Exists(filename))
             {
-                string json = JsonConvert.SerializeObject(User, Formatting.Indented);
+                string json = JsonConvert.SerializeObject(baseConfig, Formatting.Indented);
                 using (StreamWriter outFile = new StreamWriter(filename))
                 {
                     outFile.Write(json);
@@ -45,6 +47,22 @@ namespace Sailing
                 User = configFile.User;
                 Language = configFile.Language;
             }
+        }
+        public static void Write()
+        {
+            ConfigFile config = new ConfigFile
+            {
+                User = User,
+                Language = Language
+            };
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            string filename = Path.Combine(path, "config.json");
+            string json = JsonConvert.SerializeObject(config, Formatting.Indented);
+            using (StreamWriter outFile = new StreamWriter(path: filename, append: false))
+            {
+                outFile.Write(json);
+            }
+
         }
     }
 }
