@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:sailing="clr-namespace:Sailing" x:DataType="sailing:ActivityPage" 
-             x:Class="Sailing.ActivityPage">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sailing="clr-namespace:Sailing"
+             x:Class="Sailing.UserPages.ActivityPage">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Padding="20,0" BackgroundColor="{StaticResource PrimaryColor}">
@@ -61,7 +62,7 @@
                                     <FormattedString.Spans>
                                         <Span Text="Reviews" />
                                         <Span Text="("/>
-                                        <Span x:Name="ReviewAmount" Text="1"/>
+                                        <Span x:Name="ReviewAmount" Text="0"/>
                                         <Span Text=")"/>
                                     </FormattedString.Spans>
                                 </FormattedString>
@@ -72,7 +73,7 @@
                             <Label.FormattedText>
                                 <FormattedString>
                                     <FormattedString.Spans>
-                                        <Span x:Name="AverageRating" Text="8.7"/>
+                                        <Span x:Name="AverageRating" Text="7.8"/>
                                         <Span Text="/"/>
                                         <Span Text="10"/>
                                     </FormattedString.Spans>
@@ -95,16 +96,19 @@
                     </StackLayout>
                 </Frame>
                 <!--Review (Customer view)-->
+                <CollectionView x:Name="collectionViewListHorizontal" SelectionMode="None">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
                 <Frame BackgroundColor="{StaticResource PrimaryColor}" BorderColor="{StaticResource TertiaryColor}">
                                     <StackLayout>
                                         <!--Review name-->
-                                        <Label x:Name="ReviewName" Text="Incredible Restaurant!" FontSize="24" FontAttributes="Bold" TextColor="{StaticResource TertiaryColor}"/>
+                                        <Label x:Name="ReviewName" Text="{Binding ReviewTitle}" FontSize="24" FontAttributes="Bold" TextColor="{StaticResource TertiaryColor}"/>
                                         <!--Review rating-->
                                         <Label x:Name="ReviewRating" FontSize="18" TextColor="#00FF00">
                                             <Label.FormattedText>
                                                 <FormattedString>
                                                     <FormattedString.Spans>
-                                                        <Span x:Name="UserRating" Text="8.7"/>
+                                                        <Span x:Name="UserRating" Text="{Binding Rating}"/>
                                                         <Span Text="/"/>
                                                         <Span Text="10"/>
                                                     </FormattedString.Spans>
@@ -112,8 +116,8 @@
                                             </Label.FormattedText>
                                         </Label>
                                         <!--Review description + writer-->
-                                        <Label x:Name="ReviewDescription" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit sunt in culpa qui officia deserunt mollit anim id est laborum." TextColor="{StaticResource TertiaryColor}"/>
-                                        <Label x:Name="ReviewUser" Text="Kevin V. | 20-05-2021" TextColor="{StaticResource Grey}"/>
+                                        <Label x:Name="ReviewDescription" Text="{Binding ReviewDESC}" TextColor="{StaticResource TertiaryColor}"/>
+                                        <Label x:Name="ReviewUser" Text="{Binding ReviewWriterName}" TextColor="{StaticResource Grey}"/>
 
                                     </StackLayout>
                                 </Frame>
@@ -122,7 +126,9 @@
                         </DataTemplate>
                     </CarouselView.ItemTemplate>
                 </CarouselView>-->
-
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
