@@ -8,20 +8,24 @@
             <StackLayout BackgroundColor="{StaticResource PrimaryColor}">
                 <!--Head-->
                 <Label Text="Register" Style="{StaticResource PageHeader}" />
+
+
                 <!--Username-->
-                <Label Text="Username:" TextColor="{StaticResource TertiaryColor}" FontSize="20" Margin="20,100,20,0"/>
-                <Entry x:Name="Username" TextColor="{StaticResource TertiaryColor}"  Placeholder="Username..." PlaceholderColor="#BBBBBB" Margin="20,0"/>
+                <Label Text="Username:" TextColor="{StaticResource TertiaryColor}" FontSize="20" Margin="20,70,20,0"/>
+                <Entry x:Name="Username" TextColor="{StaticResource TertiaryColor}"  Placeholder="Username..." PlaceholderColor="#606060" Margin="20,0"/>
                 <!--Full name-->
                 <Label Text="Full Name:" TextColor="{StaticResource TertiaryColor}" FontSize="20" Margin="20,0"/>
-                <Entry x:Name="FullName" TextColor="{StaticResource TertiaryColor}" Placeholder="Full Name..." PlaceholderColor="#BBBBBB" Margin="20,0"/>
+                <Entry x:Name="FullName" TextColor="{StaticResource TertiaryColor}" Placeholder="Full Name..." PlaceholderColor="#606060" Margin="20,0"/>
                 <!--Password-->
                 <Label Text="Password:" TextColor="{StaticResource TertiaryColor}" FontSize="20" Margin="20,0"/>
-                <Entry x:Name="Password" TextColor="{StaticResource TertiaryColor}" Placeholder="Password..." PlaceholderColor="#BBBBBB" IsPassword="True" Margin="20,0"/>
+                <Entry x:Name="Password" TextColor="{StaticResource TertiaryColor}" Placeholder="Password..." PlaceholderColor="#606060" IsPassword="True" Margin="20,0"/>
                 <!--Create new account button-->
-                <Button Text="Create New Account" x:Name="CreateAccountButton" Padding="20,0" Margin="20,0" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="80" TextColor="{StaticResource TertiaryColor}" BorderWidth="3" BorderColor="{StaticResource TertiaryColor}" CornerRadius="20" Clicked="CreateAccountButton_Clicked"/>
+                <Button Text="Sign Up" x:Name="CreateAccountButton" Padding="20,0" Margin="20,0" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="80" TextColor="{StaticResource TertiaryColor}" BorderWidth="3" BorderColor="{StaticResource TertiaryColor}" CornerRadius="20" Clicked="CreateAccountButton_Clicked"/>
                 <!--Login option-->
+                <BoxView BackgroundColor="{StaticResource Grey}" HeightRequest="1"/>
+                
                 <Label Text="Already have an account? Click Here!:" HorizontalOptions="Center" Padding="0,20,0,0" TextColor="{StaticResource TertiaryColor}"/>
-                <Button Text="Login" x:Name="LoginButton" Padding="20,0" Margin="20,0" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="80" TextColor="{StaticResource TertiaryColor}" BorderWidth="3" BorderColor="{StaticResource TertiaryColor}" CornerRadius="20" Clicked="LoginButton_Clicked" />
+                <Button Text="Login" x:Name="LoginButton" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="50" TextColor="{StaticResource TertiaryColor}" Clicked="LoginButton_Clicked" />
             </StackLayout>
         </ScrollView>
 

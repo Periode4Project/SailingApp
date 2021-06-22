@@ -9,15 +9,17 @@
             <Label Text="Login" Style="{StaticResource PageHeader}" />
             <!--Username-->
             <Label Text="Username:" VerticalTextAlignment="Center" TextColor="{StaticResource TertiaryColor}" FontSize="20" Margin="20,100,20,0"/>
-            <Entry x:Name="Username" TextColor="{StaticResource TertiaryColor}" Placeholder="Username..." PlaceholderColor="#BBBBBB" Margin="20,0"/>
+            <Entry x:Name="Username" TextColor="{StaticResource TertiaryColor}" Placeholder="Username..." PlaceholderColor="#606060" Margin="20,0"/>
             <!--Password-->
             <Label Text="Password:" TextColor="{StaticResource TertiaryColor}" FontSize="20" Margin="20,0"/>
-            <Entry x:Name="Password" TextColor="{StaticResource TertiaryColor}" Placeholder="Password..." PlaceholderColor="#BBBBBB" IsPassword="True" Margin="20,0"/>
-            <Button x:Name="ForgotPW" Text="Forgot Password?" TextColor="{StaticResource TertiaryColor}" FontSize="26" BackgroundColor="{StaticResource PrimaryColor}" Margin="20,0" Clicked="ForgotPW_Clicked"/>
+            <Entry x:Name="Password" TextColor="{StaticResource TertiaryColor}" Placeholder="Password..." PlaceholderColor="#606060" IsPassword="True" Margin="20,0"/>
+
             <!--Login button + option to register-->
             <Button Text="Login" x:Name="LoginButton" Padding="20,0" Margin="20,0" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="80" TextColor="{StaticResource TertiaryColor}" BorderWidth="3" BorderColor="{StaticResource TertiaryColor}" CornerRadius="20" Clicked="LoginButton_Clicked"/>
+            <BoxView BackgroundColor="{StaticResource Grey}" HeightRequest="1" Margin="0,0,0,25"/>
+
             <Label Text="Already have an account? Click Here!:" HorizontalOptions="Center" Padding="0,20,0,0" TextColor="{StaticResource TertiaryColor}"/>
-            <Button Text="Register" x:Name="RegisterButton" Padding="20,0"  Margin="20,0" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="50" TextColor="{StaticResource TertiaryColor}" BorderWidth="3" BorderColor="{StaticResource TertiaryColor}" CornerRadius="20" Clicked="RegisterButton_Clicked" />
+            <Button Text="Register" x:Name="RegisterButton" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="50" TextColor="{StaticResource TertiaryColor}" Clicked="RegisterButton_Clicked" />
             <!--Button clicked-->
             <Button x:Name="Debug" Clicked="Debug_Clicked"/>
 
