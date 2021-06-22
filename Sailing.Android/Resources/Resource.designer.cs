@@ -11750,22 +11750,28 @@ namespace Sailing.Android
 			public const int notify_panel_notification_icon_bg = 2131165523;
 			
 			// aapt resource value: 0x7F070154
-			public const int RamseysExample = 2131165524;
+			public const int OnBoarding2 = 2131165524;
 			
 			// aapt resource value: 0x7F070155
-			public const int SearchIcon = 2131165525;
+			public const int OnBoarding3 = 2131165525;
 			
 			// aapt resource value: 0x7F070156
-			public const int Settings = 2131165526;
+			public const int RamseysExample = 2131165526;
 			
 			// aapt resource value: 0x7F070157
-			public const int ShipIcon = 2131165527;
+			public const int SearchIcon = 2131165527;
 			
 			// aapt resource value: 0x7F070158
-			public const int tooltip_frame_dark = 2131165528;
+			public const int Settings = 2131165528;
 			
 			// aapt resource value: 0x7F070159
-			public const int tooltip_frame_light = 2131165529;
+			public const int ShipIcon = 2131165529;
+			
+			// aapt resource value: 0x7F07015A
+			public const int tooltip_frame_dark = 2131165530;
+			
+			// aapt resource value: 0x7F07015B
+			public const int tooltip_frame_light = 2131165531;
 			
 			static Drawable()
 			{

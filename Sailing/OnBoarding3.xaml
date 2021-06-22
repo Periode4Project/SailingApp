@@ -6,14 +6,17 @@
         <StackLayout BackgroundColor="#2E92CB">
 
 
-            <Label Text="Rate activities!" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="0,20,0,0" FontSize="35" TextColor="{StaticResource TertiaryColor}"/>
+            <Label Text="Rate Activities!"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,0,0" FontSize="35" TextColor="{StaticResource TertiaryColor}"/>
+            <Image Source="OnBoarding3.PNG" Grid.Column="0" WidthRequest="250" HeightRequest="250"/>
+
+            <Label Text="Share your opinion of the activities, with us and the other users" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" Padding="0,0,0,0" FontSize="20" TextColor="{StaticResource TertiaryColor}"/>
 
             <Grid>
                 <Button x:Name="Prev" Text="Prev" HorizontalOptions="Start" VerticalOptions="End" TextColor="{StaticResource TertiaryColor}" FontSize="26" BackgroundColor="#2E92CB" Margin="20,0" Clicked="PrevButton_Clicked"/>
                 <Button x:Name="Skip" Text="Skip" HorizontalOptions="Center" VerticalOptions="End" TextColor="{StaticResource TertiaryColor}" FontSize="26" BackgroundColor="#2E92CB" Margin="20,0" Clicked="SkipButton_Clicked"/>
                 <Button x:Name="Next" Text="Next" HorizontalOptions="End" VerticalOptions="End" TextColor="{StaticResource TertiaryColor}" FontSize="26" BackgroundColor="#2E92CB" Margin="20,0" Clicked="NextButton_Clicked"/>
 
-
+ 
 
 
             </Grid>
