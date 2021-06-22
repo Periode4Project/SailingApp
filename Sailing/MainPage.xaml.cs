@@ -16,6 +16,10 @@ namespace Sailing
 
         public MainPage()
         {
+            if (Config.FirstStartup)
+            {
+                //handle first startup
+            }
             bool isDone = false;
             InitializeComponent();
             //Create background thread to handle webrequest, remedies stuck on splash screen
