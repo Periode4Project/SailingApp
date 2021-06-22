@@ -20,10 +20,6 @@ namespace Sailing
             FirstStartup = false;
             string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
             string filename = Path.Combine(path, "config.json");
-            //define the string, so it can be used inside the streamreader loop
-            string content;
-
-            //Check if the file exists. If not, create it. it'll return "" due to there being no API key, which is handled in the key verification process
             if (!File.Exists(filename))
             {
                 string json = JsonConvert.SerializeObject(User, Formatting.Indented);
