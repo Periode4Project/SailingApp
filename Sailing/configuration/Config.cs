@@ -10,13 +10,21 @@ namespace Sailing
     {
         public static User User { get; set; }
         public static bool FirstStartup { get; set; }
+        public static string Language { get; set; }
         static Config()
         {
-            User = new User
+            ConfigFile baseConfig = new ConfigFile
             {
-                Email = null,
-                Password = null
+                User = new User
+                {
+                    Email = null,
+                    Password = null
+                },
+                Language = "Nederlands"
             };
+
+            User = baseConfig.User;
+            Language = baseConfig.Language;
             FirstStartup = false;
             string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
             string filename = Path.Combine(path, "config.json");
@@ -34,9 +42,10 @@ namespace Sailing
             using (StreamReader file = File.OpenText(@"config.json"))
             {
                 JsonSerializer serializer = new JsonSerializer();
-                User = (User)serializer.Deserialize(file, typeof(User));
+                ConfigFile configFile = (ConfigFile)serializer.Deserialize(file, typeof(ConfigFile));
+                User = configFile.User;
+                Language = configFile.Language;
             }
-
         }
     }
 }

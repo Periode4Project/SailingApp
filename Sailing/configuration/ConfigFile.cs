@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sailing.configuration
+namespace Sailing
 {
     public class ConfigFile
     {
