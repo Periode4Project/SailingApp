@@ -29,13 +29,13 @@
     </ItemGroup>
 
     <ItemGroup>
-      <EmbeddedResource Update="user\ActivityPage.xaml">
+      <EmbeddedResource Update="UserPages\ActivityPage.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
       <EmbeddedResource Update="admin\Addactivity.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-      <EmbeddedResource Update="user\AddNewReview.xaml">
+      <EmbeddedResource Update="UserPages\AddNewReview.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
       <EmbeddedResource Update="common\AppShell.xaml">
@@ -47,7 +47,7 @@
       <EmbeddedResource Update="common\FilterResults.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-      <EmbeddedResource Update="user\LoggedIn.xaml">
+      <EmbeddedResource Update="UserPages\LoggedIn.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
       <EmbeddedResource Update="common\Login.xaml">
@@ -65,7 +65,7 @@
       <EmbeddedResource Update="common\Settings.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-      <EmbeddedResource Update="user\SuggestActivity.xaml">
+      <EmbeddedResource Update="UserPages\SuggestActivity.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
     </ItemGroup>
