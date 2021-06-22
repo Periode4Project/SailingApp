@@ -6,19 +6,15 @@
         
         <StackLayout BackgroundColor="{StaticResource PrimaryColor}">
             <Label Text="Adminpanel" Style="{StaticResource PageHeader}" />
-
-            <Label Text="Moderate Activities" HorizontalOptions="Center" Padding="0,20,0,0" TextColor="{StaticResource TertiaryColor}"/>
-            <Button Text="Moderate Activities" x:Name="Activitybutton" Padding="20,0"  Margin="20,0" Style="{StaticResource BorderedButton}" HeightRequest="50" Clicked="Activity_Clicked"/>
-            <!-- brengt je naar activiteiten moderation-->
-            <Label Text="Add Activities" HorizontalOptions="Center" Padding="0,20,0,0" TextColor="{StaticResource TertiaryColor}"/>
-            <Button Text="Add Activities" x:Name="AddActivitybutton" Padding="20,0"  Margin="20,0" Style="{StaticResource BorderedButton}" HeightRequest="50" Clicked="AddActivity_Clicked"/>
             <!-- laat je activiteit toevoegen -->
-            <Label Text="Moderate Reviews" HorizontalOptions="Center" Padding="0,20,0,0" TextColor="{StaticResource TertiaryColor}"/>
-            <Button Text="Moderate Reviews" x:Name="Reviewbutton" Padding="20,0"  Margin="20,0" Style="{StaticResource BorderedButton}" HeightRequest="50" Clicked="Review_Clicked"/>
+            <Button Text="Add Activities" x:Name="AddActivitybutton" Padding="20,0,0,0" Margin="10" Style="{StaticResource BorderedButton}" VerticalOptions="Start" HeightRequest="50" Clicked="AddActivity_Clicked"/>
+
+            <!-- brengt je naar activiteiten moderation-->
+            <Button Text="Moderate Activities" x:Name="Activitybutton" Padding="20,0,0,0" Margin="10" Style="{StaticResource BorderedButton}" VerticalOptions="Start"  HeightRequest="50" Clicked="Activity_Clicked"/>
+
             <!-- laat je reviews moderaten -->
-            <Label Text="Go to your mailadres" HorizontalOptions="Center" Padding="0,20,0,0" TextColor="{StaticResource TertiaryColor}"/>
-            <Button Text="Go to mail" x:Name="Mailbutton" Padding="20,0"  Margin="20,0" Style="{StaticResource BorderedButton}" HeightRequest="50" Clicked="Mail_Clicked"/>
-            <!-- brengt je naar je mailadres (gmail)-->
+            <Button Text="Moderate Reviews" x:Name="Reviewbutton" Padding="20,0,0,0" Margin="10" Style="{StaticResource BorderedButton}" VerticalOptions="Start"  HeightRequest="50" Clicked="Review_Clicked"/>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
