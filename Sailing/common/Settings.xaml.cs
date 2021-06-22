@@ -56,7 +56,7 @@ namespace Sailing
                 default:
                     GPSLocation.Text = LocationText;
                     GPSLocation.TextColor = Color.FromHex("#228b22");
-                    GPSIndicator.BackgroundColor = Color.FromHex("#00FF00");
+                    GPSIndicator.BackgroundColor = Color.FromHex("#5cb85c");
                     break;
             }
 

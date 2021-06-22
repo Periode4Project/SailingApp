@@ -51,6 +51,15 @@
                 <Setter Property="VerticalOptions" Value="EndAndExpand"/>
             </Style>
 
+            <!--Admin Settings-->
+            <Style x:Key="AdminButton" TargetType="Button">
+                <Setter Property="Padding" Value="15"/>
+                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="TextColor" Value="{StaticResource TertiaryColor}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}"/>
+                <Setter Property="WidthRequest" Value="400"/>
+            </Style>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>
