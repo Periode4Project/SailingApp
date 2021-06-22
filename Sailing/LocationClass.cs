@@ -70,6 +70,65 @@ namespace Sailing
             return "error";
         }
 
+        public async Task<string> GetLocationName(Location result)
+        {
+
+
+            try
+            {
+                
+
+                var lat = result.Latitude;
+                var lon = result.Longitude;
+
+                //haalt de informatie op van de huidige locatie
+                var placemarks = await Geocoding.GetPlacemarksAsync(lat, lon);
+
+                var placemark = placemarks?.FirstOrDefault();
+                if (placemark != null)
+                {
+                    //meerdere opties van wat je wil laten zien
+                    //var geocodeAddress =
+                    //$"AdminArea:       {placemark.AdminArea}\n" +
+                    //$"CountryCode:     {placemark.CountryCode}\n" +
+                    //$"CountryName:     {placemark.CountryName}\n" +
+                    //$"FeatureName:     {placemark.FeatureName}\n" +
+                    //$"Locality:        {placemark.Locality}\n" +
+                    //$"PostalCode:      {placemark.PostalCode}\n" +
+                    //$"SubAdminArea:    {placemark.SubAdminArea}\n" +
+                    //$"SubLocality:     {placemark.SubLocality}\n" +
+                    //$"SubThoroughfare: {placemark.SubThoroughfare}\n" +
+                    //$"Thoroughfare:    {placemark.Thoroughfare}\n";
+
+                    var geocodeAddress = placemark.Locality;
+
+                    return geocodeAddress;
+                }
+            }
+            catch (FeatureNotSupportedException fnsEx)
+            {
+                // Feature not supported on device
+                return "Not Supported error";
+            }
+            catch (FeatureNotEnabledException fneEx)
+            {
+                // Handle not enabled on device exception
+                return "Please enable GPS";
+            }
+            catch (PermissionException pEx)
+            {
+                // Handle permission exception
+                return "Permission error";
+            }
+            catch (Exception ex)
+            {
+                // Handle exception that may have occurred in geocoding
+                return "error";
+            }
+
+            return "error";
+        }
+
 
         public async Task<Location> GetCoordinates()
         {

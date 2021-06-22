@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Essentials;
 
 namespace Sailing
 {
@@ -13,11 +14,31 @@ namespace Sailing
     {
         public List<ActivityItem> activityItems { get; set; }
 
+        LocationClass locationClass = new LocationClass();
+
+        Coordinates coordinates = new Coordinates();
+
+        public Location currentLocation;
+
+        public bool GetLocation = true;
+
         public MainPage()
         {
             InitializeComponent();
+            UpdateLocation();
             activityItems = new List<ActivityItem>(ActivityItems.Get());
             collectionViewListHorizontal.ItemsSource = activityItems;
+        }
+
+        public async void UpdateLocation()
+        {
+            
+            while (GetLocation)
+            {
+                currentLocation = await locationClass.GetCoordinates();
+                Coordinates.currentLocation = currentLocation;
+                await Task.Delay(10000);
+            }
         }
 
 
