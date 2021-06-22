@@ -18,10 +18,10 @@ namespace Sailing
     {
         public string City { get; set; }
         public string Address { get; set; }
-        public Location Location { get; set; }
+        public Locations Location { get; set; }
     }
 
-    public class Location
+    public class Locations
     {
         public float lat { get; set; }
         public float lng { get; set; }

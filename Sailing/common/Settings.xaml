@@ -4,9 +4,9 @@
              x:Class="Sailing.Settings">
     <ContentPage.Content>
         <StackLayout BackgroundColor="{StaticResource PrimaryColor}">
-            
+            <!--Head-->
             <Label  Text="Settings" Style="{StaticResource PageHeader}" />
-
+            <!--Languages-->
             <Label Padding="10,0,0,0" TextColor="{StaticResource TertiaryColor}" FontSize="16" Text="Language:"/>
             <Picker Margin="10" TitleColor="{StaticResource TertiaryColor}" TextColor="{StaticResource TertiaryColor}" x:Name="LanguageSelect">
                 <Picker.Items>
@@ -18,7 +18,7 @@
             </Picker>
 
             <Label FontSize="32"/>
-
+            <!--Location-->
             <Label Padding="10,0,0,0" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource TertiaryColor}" FontSize="16" Text="Current Location:"/>
             <Frame x:Name="GPSIndicator"  Margin="10,0" CornerRadius="20" BackgroundColor="{StaticResource SuccessColour}">
                 <Label FontSize="26" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="#228b22">
@@ -26,14 +26,15 @@
                         <FormattedString>
                             <FormattedString.Spans>
                                 <Span Text="Location: "/>
-                                <Span x:Name="GPSLocation" Text="Heerenveen"/>
+                                <Span x:Name="GPSLocation" Text="Getting location"/>
                             </FormattedString.Spans>
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
             </Frame>
-
+            <!--Button to trigger the manual-->
             <Button x:Name="GetStartedButton" Text="Get Started" Style="{StaticResource BorderedButton}" Clicked="GetStartedButton_Clicked"/>
+            <!--Button to save settings-->
             <Button x:Name="SaveSettings" Text="Save Settings" Style="{StaticResource BorderedButton}" Clicked="SaveSettings_Clicked"/>
         
         </StackLayout>

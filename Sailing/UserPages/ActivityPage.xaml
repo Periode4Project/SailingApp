@@ -1,16 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:sailing="clr-namespace:Sailing" x:DataType="sailing:ActivityPage" 
-             x:Class="Sailing.ActivityPage">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sailing="clr-namespace:Sailing"
+             x:Class="Sailing.UserPages.ActivityPage">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Padding="20,0" BackgroundColor="{StaticResource PrimaryColor}">
+                <!--Name and list of the activity-->
                 <Image x:Name="ActivityImg" Source="RamseysExample" WidthRequest="300" HeightRequest="200"/>
-
                 <Label x:Name="ActivityName" Text="Ramsey's Steakhouse" HorizontalOptions="Start" Style="{StaticResource PageHeader}"/>
 
                 <Label FontSize="5"/>
-
+                <!--Type of the activity-->
                 <Label Margin="0,-12" Style="{StaticResource Description}">
                     <Label.FormattedText>
                         <FormattedString>
@@ -22,7 +23,7 @@
                     </Label.FormattedText>
                 </Label>
 
-
+                <!--Location of the activity-->
                 <Label Style="{StaticResource Description}">
                     <Label.FormattedText>
                         <FormattedString>
@@ -34,7 +35,7 @@
                     </Label.FormattedText>
                 </Label>
 
-
+                <!--Entrance fee for the activity-->
                 <Label  Margin="0,-12" Style="{StaticResource Description}">
                     <Label.FormattedText>
                         <FormattedString>
@@ -48,31 +49,31 @@
                 </Label>
 
                 <Label FontSize="5"/>
-
+                <!--Description of the activity-->
                 <Label x:Name="ActivityDescription" TextColor="{StaticResource TertiaryColor}" FontSize="18"
                    Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Steak very Delicious"/>
 
                 <!--Review Section-->
                 <BoxView HeightRequest="1" BackgroundColor="{StaticResource SecondaryColor}"/>
-
+                        <!--Review amount-->
                         <Label FontSize="24"  FontAttributes="Bold" TextColor="{StaticResource TertiaryColor}">
                             <Label.FormattedText>
                                 <FormattedString>
                                     <FormattedString.Spans>
                                         <Span Text="Reviews" />
                                         <Span Text="("/>
-                                        <Span x:Name="ReviewAmount" Text="1"/>
+                                        <Span x:Name="ReviewAmount" Text="0"/>
                                         <Span Text=")"/>
                                     </FormattedString.Spans>
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
-
+                        <!--Rating for the activity-->
                         <Label x:Name="AverageReviews" FontSize="40"  FontAttributes="Bold" TextColor="#00FF00">
                             <Label.FormattedText>
                                 <FormattedString>
                                     <FormattedString.Spans>
-                                        <Span x:Name="AverageRating" Text="8.7"/>
+                                        <Span x:Name="AverageRating" Text="7.8"/>
                                         <Span Text="/"/>
                                         <Span Text="10"/>
                                     </FormattedString.Spans>
@@ -84,6 +85,7 @@
                     <CarouselView.ItemTemplate>
                         <DataTemplate>
                             <StackLayout>-->
+                <!--Add review-->
                 <Frame BackgroundColor="{StaticResource PrimaryColor}" BorderColor="{StaticResource TertiaryColor}">
                     <StackLayout x:Name="AddReview">
                         <StackLayout.GestureRecognizers>
@@ -93,25 +95,29 @@
                         <Label TextColor="{StaticResource TertiaryColor}"  HorizontalOptions="Center" VerticalOptions="Center" Text="Add New Review"/>
                     </StackLayout>
                 </Frame>
-
+                <!--Review (Customer view)-->
+                <CollectionView x:Name="collectionViewListHorizontal" SelectionMode="None">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
                 <Frame BackgroundColor="{StaticResource PrimaryColor}" BorderColor="{StaticResource TertiaryColor}">
                                     <StackLayout>
-                                        <Label x:Name="ReviewName" Text="Incredible Restaurant!" FontSize="24" FontAttributes="Bold" TextColor="{StaticResource TertiaryColor}"/>
-
+                                        <!--Review name-->
+                                        <Label x:Name="ReviewName" Text="{Binding ReviewTitle}" FontSize="24" FontAttributes="Bold" TextColor="{StaticResource TertiaryColor}"/>
+                                        <!--Review rating-->
                                         <Label x:Name="ReviewRating" FontSize="18" TextColor="#00FF00">
                                             <Label.FormattedText>
                                                 <FormattedString>
                                                     <FormattedString.Spans>
-                                                        <Span x:Name="UserRating" Text="8.7"/>
+                                                        <Span x:Name="UserRating" Text="{Binding Rating}"/>
                                                         <Span Text="/"/>
                                                         <Span Text="10"/>
                                                     </FormattedString.Spans>
                                                 </FormattedString>
                                             </Label.FormattedText>
                                         </Label>
-
-                                        <Label x:Name="ReviewDescription" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit sunt in culpa qui officia deserunt mollit anim id est laborum." TextColor="{StaticResource TertiaryColor}"/>
-                                        <Label x:Name="ReviewUser" Text="Kevin V. | 20-05-2021" TextColor="{StaticResource Grey}"/>
+                                        <!--Review description + writer-->
+                                        <Label x:Name="ReviewDescription" Text="{Binding ReviewDESC}" TextColor="{StaticResource TertiaryColor}"/>
+                                        <Label x:Name="ReviewUser" Text="{Binding ReviewWriterName}" TextColor="{StaticResource Grey}"/>
 
                                     </StackLayout>
                                 </Frame>
@@ -120,7 +126,9 @@
                         </DataTemplate>
                     </CarouselView.ItemTemplate>
                 </CarouselView>-->
-
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
