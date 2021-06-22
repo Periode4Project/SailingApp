@@ -12,13 +12,13 @@
     <ItemGroup>
       <Compile Remove="images\**" />
       <Compile Remove="NewFolder1\**" />
-      <Compile Remove="NewFolder\**" />
+      <Compile Remove="NewFolder2\**" />
       <EmbeddedResource Remove="images\**" />
       <EmbeddedResource Remove="NewFolder1\**" />
-      <EmbeddedResource Remove="NewFolder\**" />
+      <EmbeddedResource Remove="NewFolder2\**" />
       <None Remove="images\**" />
       <None Remove="NewFolder1\**" />
-      <None Remove="NewFolder\**" />
+      <None Remove="NewFolder2\**" />
     </ItemGroup>
 
     <ItemGroup>
@@ -29,48 +29,44 @@
     </ItemGroup>
 
     <ItemGroup>
-      <EmbeddedResource Update="ActivityPage.xaml">
+      <EmbeddedResource Update="user\ActivityPage.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-      <EmbeddedResource Update="Addactivity.xaml">
+      <EmbeddedResource Update="admin\Addactivity.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-      <EmbeddedResource Update="AddNewReview.xaml">
+      <EmbeddedResource Update="user\AddNewReview.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-      <EmbeddedResource Update="AppShell.xaml">
+      <EmbeddedResource Update="common\AppShell.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-      <EmbeddedResource Update="Editactivity.xaml">
+      <EmbeddedResource Update="admin\Editactivity.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-      <EmbeddedResource Update="FilterResults.xaml">
+      <EmbeddedResource Update="common\FilterResults.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-      <EmbeddedResource Update="LoggedIn.xaml">
+      <EmbeddedResource Update="user\LoggedIn.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-      <EmbeddedResource Update="Login.xaml">
+      <EmbeddedResource Update="common\Login.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-      <EmbeddedResource Update="Map.xaml">
+      <EmbeddedResource Update="unused\Map.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-      <EmbeddedResource Update="MyAccount.xaml">
+      <EmbeddedResource Update="common\MyAccount.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-      <EmbeddedResource Update="Register.xaml">
+      <EmbeddedResource Update="common\Register.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-      <EmbeddedResource Update="Settings.xaml">
+      <EmbeddedResource Update="common\Settings.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-      <EmbeddedResource Update="SuggestActivity.xaml">
+      <EmbeddedResource Update="user\SuggestActivity.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="NewFolder2\" />
     </ItemGroup>
 </Project>
