@@ -4,10 +4,19 @@
              x:Class="Sailing.OnBoarding1">
     
         <ContentPage.Content>
+        
             <StackLayout BackgroundColor="#2E92CB">
+            <Label Padding="10,0,0,0" TextColor="{StaticResource TertiaryColor}" HorizontalTextAlignment="Center" FontSize="20" Text="Language:"/>
+            <Picker Margin="10" TitleColor="{StaticResource TertiaryColor}" TextColor="{StaticResource TertiaryColor}" x:Name="LanguageSelect">
+                <Picker.Items>
+                    <x:String>English</x:String>
+                    <x:String>Nederlands</x:String>
+                    <x:String>Deutsch</x:String>
+                    <x:String>Frysk</x:String>
+                </Picker.Items>
+            </Picker>
 
-
-                <Label Text="Welcome on Board!" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="0,20,0,0" FontSize="35" TextColor="{StaticResource TertiaryColor}"/>
+            <Label Text="Welcome on Board!" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="0,20,0,0" FontSize="35" TextColor="{StaticResource TertiaryColor}"/>
 
                 <Grid>
                     <Button x:Name="Skip" Text="Skip" HorizontalOptions="Center" VerticalOptions="End" TextColor="{StaticResource TertiaryColor}" FontSize="26" BackgroundColor="#2E92CB" Margin="20,0" Clicked="SkipButton_Clicked"/>
