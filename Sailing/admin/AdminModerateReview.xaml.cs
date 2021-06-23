@@ -33,9 +33,21 @@ namespace Sailing.Admin
 
         private async void SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Review review = (Review)e.CurrentSelection.FirstOrDefault();
-            await admin.ReviewDeletion.IsDeleteReviewSuccessful(review.ReviewID);
-            await Navigation.PushAsync(new AdminModerateReview());
+            if (collectionViewListHorizontal.SelectedItem == null)
+                return;
+            bool answer = await DisplayAlert("Warning:", "Do you want to delete this review?", "Yes", "No");
+            if (answer)
+            {
+                
+                Review review = (Review)e.CurrentSelection.FirstOrDefault();
+                await admin.ReviewDeletion.IsDeleteReviewSuccessful(review.ReviewID);
+                await Navigation.PushAsync(new AdminModerateReview());
+            }
+            else
+            {
+                await DisplayAlert("Cancelled", "Review has not been deleted.", "OK");
+                collectionViewListHorizontal.SelectedItem = null;
+            }
         }
     }
 }

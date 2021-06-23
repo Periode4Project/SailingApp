@@ -34,9 +34,20 @@ namespace Sailing
 
         private async void SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            ActivityItem activity = (ActivityItem)e.CurrentSelection.FirstOrDefault();
-            await admin.ActivityDeletion.IsDeleteActivitySuccessful(activity.ActivityId);
-            await Navigation.PushAsync(new AdminModerateActivity());
+            if (collectionViewListHorizontal.SelectedItem == null)
+                return;
+            bool answer = await DisplayAlert("Warning:", "Do you want to delete this activity?", "Yes", "No");
+            if (answer)
+            {
+                ActivityItem activity = (ActivityItem)e.CurrentSelection.FirstOrDefault();
+                await admin.ActivityDeletion.IsDeleteActivitySuccessful(activity.ActivityId);
+                await Navigation.PushAsync(new AdminModerateActivity());
+            }
+            else
+            {
+                collectionViewListHorizontal.SelectedItem = null;
+                await DisplayAlert("Cancelled", "Activity has not been deleted.", "OK");
+            }
         }
     }
 }
