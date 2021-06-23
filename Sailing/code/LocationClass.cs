@@ -158,6 +158,34 @@ namespace Sailing
             return Kilometers;
         }
 
-        
+        public async Task<Location> AddressToCoordinates(string address)
+        {
+            try
+            { 
+                var locations = await Geocoding.GetLocationsAsync(address);
+
+                var location = locations?.FirstOrDefault();
+                if (location != null)
+                {
+                    Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
+                    return location;
+                }
+
+                Location error = new Location(0.000, 0.000);
+                return error;
+            }
+            catch (FeatureNotSupportedException fnsEx)
+            {
+                // Feature not supported on device
+                Location error = new Location(0.000, 0.000);
+                return error;
+            }
+            catch (Exception ex)
+            {
+                // Handle exception that may have occurred in geocoding
+                Location error = new Location(0.000, 0.000);
+                return error;
+            }
+        }
     }
 }
