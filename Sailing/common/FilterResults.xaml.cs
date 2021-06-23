@@ -17,6 +17,7 @@ namespace Sailing
             InitializeComponent();
         }
 
+        AdminInt boolint { get; set; }
 
         private void MaxVal_ValueChanged(object sender, ValueChangedEventArgs e)
         {

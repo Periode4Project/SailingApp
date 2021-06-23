@@ -18,7 +18,7 @@ namespace Sailing
         }
         private async void AddActivity_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PopAsync();
+            await Navigation.PushAsync(new Adminpanel());
         }
     }
 }

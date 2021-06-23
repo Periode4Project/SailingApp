@@ -29,7 +29,6 @@
       <EmbeddedResource Update="FilterResults.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-      <EmbeddedResource Update="AppShell.xaml">
       <EmbeddedResource Update="LoggedIn.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
