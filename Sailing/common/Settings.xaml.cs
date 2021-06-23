@@ -33,7 +33,7 @@ namespace Sailing
 
         private void GetStartedButton_Clicked(object sender, EventArgs e)
         {
-            
+             Navigation.PushAsync(new OnBoarding1());
         }
 
         private async void SetLocation()
@@ -59,8 +59,6 @@ namespace Sailing
                     GPSIndicator.BackgroundColor = Color.FromHex("#5cb85c");
                     break;
             }
-
-            
         }
     }
 }
