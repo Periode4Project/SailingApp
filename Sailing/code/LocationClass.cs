@@ -144,15 +144,20 @@ namespace Sailing
         /// method om afstand tussen 2 locaties te berekenen
         /// </summary>
         /// <returns></returns>
-        public async Task<double> GetDistance()
+        public double GetDistance(Location other)
         {
             //haalt de huidige locatie op
-            Location current = await GetCoordinates();
+            //Location current = await GetCoordinates();
+            Location current = Coordinates.currentLocation;
+
+            
             //otherlocation is nu een voorbeeld, je kan een locatie of coordinaten meegeven en dan wordt de afstand in kilometer berekend
-            Location OtherLocation = new Location(37.783333, -122.416667);
-            double Kilometers = Location.CalculateDistance(current, OtherLocation, DistanceUnits.Kilometers);
+            //Location OtherLocation = new Location(37.783333, -122.416667);
+            double Kilometers = Location.CalculateDistance(current, other, DistanceUnits.Kilometers);
 
             return Kilometers;
         }
+
+        
     }
 }

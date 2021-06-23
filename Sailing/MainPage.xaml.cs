@@ -30,7 +30,7 @@ namespace Sailing
             }
             bool isDone = false;
             InitializeComponent();
-            UpdateLocation();
+            
             
             //Create background thread to handle webrequest, remedies stuck on splash screen
             new Thread(async () =>
@@ -41,7 +41,33 @@ namespace Sailing
             //while it's not done, wait 1 second
             while (!isDone)
                 Thread.Sleep(1);
-            collectionViewListHorizontal.ItemsSource = activityItems;
+
+            SetActivities();
+        }
+
+
+        public async void SetActivities()
+        {
+            List<ActivityItem> shownActivities = new List<ActivityItem>();
+            
+            currentLocation = await locationClass.GetCoordinates();
+            Coordinates.currentLocation = currentLocation;
+
+            foreach (var item in activityItems)
+            {
+                Location other = new Location(item.ActivityPlace.Location.lat, item.ActivityPlace.Location.lng);
+                double distance = locationClass.GetDistance(other);
+
+                if (distance < 5)
+                {
+                    shownActivities.Add(item);
+                }
+
+                //shownActivities.Add(item);
+            }
+
+            collectionViewListHorizontal.ItemsSource = shownActivities;
+            UpdateLocation();
         }
 
         public async void UpdateLocation()
