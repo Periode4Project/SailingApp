@@ -44,5 +44,41 @@ namespace Sailing.UserPages
         {
             return GetAsync(review).Result;
         }
+
+        public static async Task<List<Review>> GetAsync()
+        {
+            try
+            {
+                string url = $@"http://64.40.9.86:25832/Reviews/GetAllReviews";
+                HttpClient client = new HttpClient();
+                client.DefaultRequestHeaders.Add("Accept", "application/json");
+                HttpResponseMessage response = await client.GetAsync(url);
+                response.EnsureSuccessStatusCode();
+                return JsonConvert.DeserializeObject<List<Review>>(await response.Content.ReadAsStringAsync());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return new List<Review>
+                {
+                    new Review
+                    {
+                        ReviewID = 0,
+                        ReviewTitle = "Error",
+                        Rating = 0,
+                        ReviewDESC = e.Message,
+                        ReviewWriter = 0,
+                        ReviewWriterName = "Error",
+                        Activity = 0
+                    }
+                };
+            }
+
+        }
+
+        public static List<Review> Get()
+        {
+            return GetAsync().Result;
+        }
     }
 }
