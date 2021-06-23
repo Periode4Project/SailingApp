@@ -60,12 +60,12 @@ namespace Sailing
                 double distance = locationClass.GetDistance(other);
 
                 //afstand waar de locatie binnen moet liggen
-                if (distance < 100)
+                if (distance < 10)
                 {
                     shownActivities.Add(item);
                 }
-
-                //shownActivities.Add(item);
+                
+                
             }
 
             collectionViewListHorizontal.ItemsSource = shownActivities;
