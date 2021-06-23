@@ -27,7 +27,10 @@ namespace Sailing
             Config.User.Password = PasswordField.Text;
             bool isValid = await configuration.Auth.CheckIsValidLogin(writecfg: true);
             if (isValid)
-                await Navigation.PushAsync(new MainPage());
+            {
+
+                await Navigation.PushAsync(new MyAccount());
+            }
             else
                 await DisplayAlert("Invalid Credentials", "We were unable to log you in. Please try again.", "OK");
         }
