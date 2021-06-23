@@ -8,6 +8,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Essentials;
+using System.Windows.Input;
 
 namespace Sailing
 {
@@ -22,10 +23,12 @@ namespace Sailing
 
         public bool GetLocation = true;
 
+
+
         public MainPage()
         {
             
-
+     
             if (Config.FirstStartup)
             {
                 //handle first startup
@@ -33,8 +36,8 @@ namespace Sailing
             }
             bool isDone = false;
             InitializeComponent();
-            
-            
+
+
             //Create background thread to handle webrequest, remedies stuck on splash screen
             new Thread(async () =>
             {
@@ -85,7 +88,7 @@ namespace Sailing
                 Coordinates.currentLocation = currentLocation;
                 await Task.Delay(10000);
                 //zorgt ervoor dat de activities worden geupdate, kan misschien een langere cooldown hebben
-                SetActivities();
+                //SetActivities();
             }
         }
 
@@ -99,6 +102,21 @@ namespace Sailing
         {
             await Navigation.PushAsync(new FilterResults());
         }
-        
+
+        private void RefreshView_Refreshing(object sender, EventArgs e)
+        {
+            bool isDone = false;
+
+            new Thread(async () =>
+            {
+                activityItems = new List<ActivityItem>(await ActivityItems.GetAsync());
+                isDone = true;
+            }).Start();
+            //while it's not done, wait 1 second
+            while (!isDone)
+                Thread.Sleep(1);
+            SetActivities();
+            Refresh.IsRefreshing = false;
+        }
     }
 }
