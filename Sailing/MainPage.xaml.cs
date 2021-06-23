@@ -43,6 +43,7 @@ namespace Sailing
                 Thread.Sleep(1);
 
             SetActivities();
+            UpdateLocation();
         }
 
 
@@ -58,7 +59,8 @@ namespace Sailing
                 Location other = new Location(item.ActivityPlace.Location.lat, item.ActivityPlace.Location.lng);
                 double distance = locationClass.GetDistance(other);
 
-                if (distance < 5)
+                //afstand waar de locatie binnen moet liggen
+                if (distance < 100)
                 {
                     shownActivities.Add(item);
                 }
@@ -67,7 +69,8 @@ namespace Sailing
             }
 
             collectionViewListHorizontal.ItemsSource = shownActivities;
-            UpdateLocation();
+
+            
         }
 
         public async void UpdateLocation()
@@ -78,6 +81,8 @@ namespace Sailing
                 currentLocation = await locationClass.GetCoordinates();
                 Coordinates.currentLocation = currentLocation;
                 await Task.Delay(10000);
+                //zorgt ervoor dat de activities worden geupdate, kan misschien een langere cooldown hebben
+                SetActivities();
             }
         }
 
