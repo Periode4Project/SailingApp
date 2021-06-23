@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Sailing.UserPages;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Essentials;
@@ -22,9 +24,23 @@ namespace Sailing
 
         public MainPage()
         {
+            if (Config.FirstStartup)
+            {
+                //handle first startup
+            }
+            bool isDone = false;
             InitializeComponent();
             UpdateLocation();
-            activityItems = new List<ActivityItem>(ActivityItems.Get());
+            
+            //Create background thread to handle webrequest, remedies stuck on splash screen
+            new Thread(async () =>
+            {
+                activityItems = new List<ActivityItem>(await ActivityItems.GetAsync());
+                isDone = true;
+            }).Start();
+            //while it's not done, wait 1 second
+            while (!isDone)
+                Thread.Sleep(1);
             collectionViewListHorizontal.ItemsSource = activityItems;
         }
 

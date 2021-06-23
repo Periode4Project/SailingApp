@@ -12,64 +12,61 @@
     <ItemGroup>
       <Compile Remove="images\**" />
       <Compile Remove="NewFolder1\**" />
-      <Compile Remove="NewFolder\**" />
+      <Compile Remove="NewFolder2\**" />
       <EmbeddedResource Remove="images\**" />
       <EmbeddedResource Remove="NewFolder1\**" />
-      <EmbeddedResource Remove="NewFolder\**" />
+      <EmbeddedResource Remove="NewFolder2\**" />
       <None Remove="images\**" />
       <None Remove="NewFolder1\**" />
-      <None Remove="NewFolder\**" />
+      <None Remove="NewFolder2\**" />
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
         <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
         <PackageReference Include="Xamarin.Forms" Version="4.8.0.1821" />
         <PackageReference Include="Xamarin.Forms.Maps" Version="4.8.0.1821" />
     </ItemGroup>
 
     <ItemGroup>
-      <EmbeddedResource Update="ActivityPage.xaml">
+      <EmbeddedResource Update="UserPages\ActivityPage.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-      <EmbeddedResource Update="Addactivity.xaml">
+      <EmbeddedResource Update="admin\Addactivity.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-      <EmbeddedResource Update="AddNewReview.xaml">
+      <EmbeddedResource Update="UserPages\AddNewReview.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-      <EmbeddedResource Update="AppShell.xaml">
+      <EmbeddedResource Update="common\AppShell.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-      <EmbeddedResource Update="Editactivity.xaml">
+      <EmbeddedResource Update="admin\Editactivity.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-      <EmbeddedResource Update="FilterResults.xaml">
+      <EmbeddedResource Update="common\FilterResults.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-      <EmbeddedResource Update="LoggedIn.xaml">
+      <EmbeddedResource Update="UserPages\LoggedIn.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-      <EmbeddedResource Update="Login.xaml">
+      <EmbeddedResource Update="common\Login.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-      <EmbeddedResource Update="Map.xaml">
+      <EmbeddedResource Update="unused\Map.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-      <EmbeddedResource Update="MyAccount.xaml">
+      <EmbeddedResource Update="common\MyAccount.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-      <EmbeddedResource Update="Register.xaml">
+      <EmbeddedResource Update="common\Register.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-      <EmbeddedResource Update="Settings.xaml">
+      <EmbeddedResource Update="common\Settings.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-      <EmbeddedResource Update="SuggestActivity.xaml">
+      <EmbeddedResource Update="UserPages\SuggestActivity.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="NewFolder2\" />
     </ItemGroup>
 </Project>

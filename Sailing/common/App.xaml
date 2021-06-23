@@ -44,11 +44,20 @@
                 <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}"/>
                 <Setter Property="TextColor" Value="{StaticResource TertiaryColor}"/>
                 <Setter Property="BorderColor" Value="{StaticResource TertiaryColor}"/>
-                <Setter Property="BorderWidth" Value="3"/>
-                <Setter Property="CornerRadius" Value="45"/>
+                <Setter Property="BorderWidth" Value="2"/>
+                <Setter Property="CornerRadius" Value="35"/>
                 <Setter Property="FontSize" Value="24"/>
                 <Setter Property="HeightRequest" Value="100"/>
                 <Setter Property="VerticalOptions" Value="EndAndExpand"/>
+            </Style>
+
+            <!--Admin Settings-->
+            <Style x:Key="AdminButton" TargetType="Button">
+                <Setter Property="Padding" Value="15"/>
+                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="TextColor" Value="{StaticResource TertiaryColor}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}"/>
+                <Setter Property="WidthRequest" Value="400"/>
             </Style>
 
         </ResourceDictionary>

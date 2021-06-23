@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sailing.Adminpanel">
+    <ContentPage.Content>
+        
+        <StackLayout BackgroundColor="{StaticResource PrimaryColor}">
+            <Label Text="Adminpanel" Style="{StaticResource PageHeader}" />
+            
+            <!-- laat je activiteit toevoegen -->
+            <BoxView BackgroundColor="{StaticResource Grey}" HeightRequest="1"/>
+            <Button Text="Add Activities" x:Name="AddActivitybutton" ImageSource="AddActivity.png" Style="{StaticResource AdminButton}" Clicked="AddActivity_Clicked"/>
+            <BoxView BackgroundColor="{StaticResource Grey}" HeightRequest="1"/>
+
+            <!-- brengt je naar activiteiten moderation-->
+            <Button Text="Moderate Activities" x:Name="Activitybutton" ImageSource="ManageActivities.png" Style="{StaticResource AdminButton}" Clicked="Activity_Clicked"/>
+            <BoxView BackgroundColor="{StaticResource Grey}" HeightRequest="1"/>
+
+            <!-- laat je reviews moderaten -->
+            <Button Text="Moderate Reviews" x:Name="Reviewbutton" ImageSource="ManageReviews.png" Style="{StaticResource AdminButton}" Clicked="Review_Clicked"/>
+            <BoxView BackgroundColor="{StaticResource Grey}" HeightRequest="1"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
