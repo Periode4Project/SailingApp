@@ -16,8 +16,6 @@ namespace Sailing
 
         LocationClass locationClass = new LocationClass();
 
-        Coordinates coordinates = new Coordinates();
-
         public Location currentLocation;
 
         public bool GetLocation = true;
@@ -40,7 +38,6 @@ namespace Sailing
                 await Task.Delay(10000);
             }
         }
-
 
         private async void SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
