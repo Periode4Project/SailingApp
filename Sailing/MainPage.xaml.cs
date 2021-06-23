@@ -76,7 +76,8 @@ namespace Sailing
 
             collectionViewListHorizontal.ItemsSource = shownActivities;
 
-            
+            //Location mediamarkt = await locationClass.AddressToCoordinates("De Centrale 12, 8924 CZ Leeuwarden");
+            //Console.WriteLine(mediamarkt.Latitude + mediamarkt.Longitude);
         }
 
         public async void UpdateLocation()
