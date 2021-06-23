@@ -24,13 +24,16 @@ namespace Sailing
 
         public MainPage()
         {
+            
+
             if (Config.FirstStartup)
             {
                 //handle first startup
+                Navigation.PushAsync(new OnBoarding1());
             }
             bool isDone = false;
             InitializeComponent();
-            UpdateLocation();
+            
             
             //Create background thread to handle webrequest, remedies stuck on splash screen
             new Thread(async () =>
@@ -41,7 +44,36 @@ namespace Sailing
             //while it's not done, wait 1 second
             while (!isDone)
                 Thread.Sleep(1);
-            collectionViewListHorizontal.ItemsSource = activityItems;
+
+            SetActivities();
+            UpdateLocation();
+        }
+
+
+        public async void SetActivities()
+        {
+            List<ActivityItem> shownActivities = new List<ActivityItem>();
+            
+            currentLocation = await locationClass.GetCoordinates();
+            Coordinates.currentLocation = currentLocation;
+
+            foreach (var item in activityItems)
+            {
+                Location other = new Location(item.ActivityPlace.Location.lat, item.ActivityPlace.Location.lng);
+                double distance = locationClass.GetDistance(other);
+
+                //afstand waar de locatie binnen moet liggen
+                if (distance < 10)
+                {
+                    shownActivities.Add(item);
+                }
+                
+                
+            }
+
+            collectionViewListHorizontal.ItemsSource = shownActivities;
+
+            
         }
 
         public async void UpdateLocation()
@@ -52,6 +84,8 @@ namespace Sailing
                 currentLocation = await locationClass.GetCoordinates();
                 Coordinates.currentLocation = currentLocation;
                 await Task.Delay(10000);
+                //zorgt ervoor dat de activities worden geupdate, kan misschien een langere cooldown hebben
+                SetActivities();
             }
         }
 
