@@ -9,41 +9,42 @@
     </Shell.TitleView>
     
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout BackgroundColor="{StaticResource PrimaryColor}">
-                <!--Search Bar-->
-                <Grid BackgroundColor="{StaticResource TertiaryColor}">
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <Image Source="SearchIcon.png" Grid.Column="0" WidthRequest="45" HeightRequest="45"/>
-                    <Entry x:Name="SearchActivity" Grid.Column="1" Grid.ColumnSpan="3" Placeholder="Search Activity..." PlaceholderColor="#909090"/>
-                    <!-- Button for filtering results-->
-                    <ImageButton Source="FilterIcon.png" x:Name="FilterButton" BackgroundColor="{StaticResource TertiaryColor}" Grid.Column="4" WidthRequest="45" HeightRequest="45" Clicked="FilterButton_Clicked"/>
+        <RefreshView x:Name="Refresh" Refreshing="RefreshView_Refreshing">
+            <ScrollView>
+                <StackLayout BackgroundColor="{StaticResource PrimaryColor}">
+                    <!--Search Bar-->
+                    <Grid BackgroundColor="{StaticResource TertiaryColor}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="SearchIcon.png" Grid.Column="0" WidthRequest="45" HeightRequest="45"/>
+                        <Entry x:Name="SearchActivity" Grid.Column="1" Grid.ColumnSpan="3" Placeholder="Search Activity..." PlaceholderColor="#909090"/>
+                        <!-- Button for filtering results-->
+                        <ImageButton Source="FilterIcon.png" x:Name="FilterButton" BackgroundColor="{StaticResource TertiaryColor}" Grid.Column="4" WidthRequest="45" HeightRequest="45" Clicked="FilterButton_Clicked"/>
 
-                </Grid>
-                <!--Here starts the (filtered) activities list-->
-                <Label Text="Activities in your Area:" Style="{StaticResource PageHeader}"/>
+                    </Grid>
+                    <!--Here starts the (filtered) activities list-->
+                    <Label Text="Activities in your Area:" Style="{StaticResource PageHeader}"/>
 
-                <CollectionView x:Name="collectionViewListHorizontal" SelectionMode="Single" SelectionChanged="SelectionChanged">
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <!--Activity Shell-->
-                            <Frame BackgroundColor="#FFFFFF" CornerRadius="35" Margin="15, 0">
-                                <StackLayout x:Name="Activity" Margin="0, 15">
+                    <CollectionView x:Name="collectionViewListHorizontal" SelectionMode="Single" SelectionChanged="SelectionChanged">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <!--Activity Shell-->
+                                <Frame BackgroundColor="#FFFFFF" CornerRadius="35" Margin="15, 0">
+                                    <StackLayout x:Name="Activity" Margin="0, 15">
 
-                                    <Image x:Name="ActivityImg" Source="{Binding ActivityImage}" WidthRequest="300" HeightRequest="200"/>
+                                        <Image x:Name="ActivityImg" Source="{Binding ActivityImage}" WidthRequest="300" HeightRequest="200"/>
 
                                         <BoxView HeightRequest="1" BackgroundColor="Black"/>
 
                                         <Label x:Name="ActivityTitle" Text="{Binding ActivityName}" FontSize="Title"  TextColor="Black" FontAttributes="Bold"/>
-                                         
+
                                         <!--Type of the activity-->
                                         <Label Margin="0,-12" Style="{StaticResource DescriptionSmall}">
                                             <Label.FormattedText>
@@ -68,7 +69,7 @@
                                             </Label.FormattedText>
                                         </Label>
 
-                                         <!--Entrance fee for the activity-->
+                                        <!--Entrance fee for the activity-->
                                         <Label  Margin="0,-12" Style="{StaticResource DescriptionSmall}">
                                             <Label.FormattedText>
                                                 <FormattedString>
@@ -87,11 +88,13 @@
 
                                 </Frame>
 
-                            <!-- Shell -->
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
+                                <!-- Shell -->
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
                     </CollectionView>
-            </StackLayout>
-        </ScrollView>
+                </StackLayout>
+            </ScrollView>
+        </RefreshView>
+        
     </ContentPage.Content>
 </ContentPage>
