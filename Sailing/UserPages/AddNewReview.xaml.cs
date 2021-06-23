@@ -24,9 +24,15 @@ namespace Sailing
         /// <param name="e"></param>
         private async void ReviewSubmit_Clicked(object sender, EventArgs e)
         {
-            if ((RevTitle.Text != null) && (RevRating.Text != null) && (RevSubmitter.Text != null))
+            if ((RevTitle.Text != null) && (RevRating.Text != null) && (RevExp.Text != null))
             {
-                await DisplayAlert("Success","Review Succesfully Submitted!","OK");
+                if (await SubmitReview.IsSuccessful(RevTitle.Text, RevExp.Text, Convert.ToDouble(RevRating.Text), SelectedActivity.activityItem.ActivityId))
+                {
+                    await DisplayAlert("Success", "Review Succesfully Submitted!", "OK");
+                }
+                else
+                    await DisplayAlert("Error", "Review was not Submitted!", "OK");
+
             }
             else
             {
