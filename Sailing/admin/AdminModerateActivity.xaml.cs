@@ -35,11 +35,13 @@ namespace Sailing
 
         private async void Edit_Clicked(object sender, EventArgs e)
         {
+            await Navigation.PopAsync();
             await Navigation.PushAsync(new Editactivity());
             // brengt je naar de editpagina
         }
         private async void Delete_Clicked(object sender, EventArgs e)
         {
+            await Navigation.PopAsync();
             await Navigation.PushAsync(new AdminModerateActivity());
             // dit is alleen tijdelijk omdat ik alleen front-end maakte, verwijder naar eigen inzicht
         }
