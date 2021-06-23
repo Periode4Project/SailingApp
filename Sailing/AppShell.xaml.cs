@@ -15,10 +15,6 @@ namespace Sailing
         {
             InitializeComponent();
         }
-        private async void Settings(object sender, EventArgs e)
-        {
-            Navigation.PopToRootAsync();
-        }
         public class MyTab : TabBar
         {
             protected override void OnPropertyChanged([CallerMemberName] string propertyName = null)
