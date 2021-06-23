@@ -26,10 +26,17 @@
     </Shell.Resources>
 
     <!--Colors for the lowest NavBar-->
-    <TabBar>
-        <ShellContent Title="Activities" Icon="Home_Icon" ContentTemplate="{DataTemplate local:MainPage}" />
-        <ShellContent Title="My Account" Icon="MyAccount_Icon.png"  ContentTemplate="{DataTemplate local:MyAccount}" />
-        <ShellContent Title="Settings" Icon="Settings.png" ContentTemplate="{DataTemplate local:Settings}"/>
-    </TabBar>
+
+    <local:MyTab>
+        <Tab Title="Activities" Icon="Home_Icon">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+        <Tab Title="My Account" Icon="MyAccount_Icon.png">
+            <ShellContent ContentTemplate="{DataTemplate local:MyAccount}" />
+        </Tab>
+        <Tab Title="Settings" Icon="Settings.png">
+            <ShellContent ContentTemplate="{DataTemplate local:Settings}"/>
+        </Tab>
+    </local:MyTab>
 
 </Shell>
