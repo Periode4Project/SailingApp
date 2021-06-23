@@ -18,7 +18,7 @@ namespace Sailing
         }
         private async void AddActivity_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AdminModerateActivity());
+            await Navigation.PopAsync();
             //brengt je terug naar adminmoderate pagina zodat je verder kan gaan met editen)
         }
     }
