@@ -24,9 +24,12 @@ namespace Sailing
 
         public MainPage()
         {
+            
+
             if (Config.FirstStartup)
             {
                 //handle first startup
+                Navigation.PushAsync(new OnBoarding1());
             }
             bool isDone = false;
             InitializeComponent();

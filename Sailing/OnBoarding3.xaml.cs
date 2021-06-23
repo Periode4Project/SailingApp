@@ -29,7 +29,7 @@ namespace Sailing
         }
         private async void NextButton_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new MainPage());
+            await Navigation.PopToRootAsync();
 
         }
     }
