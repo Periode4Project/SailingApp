@@ -13,7 +13,7 @@ namespace Sailing
     public partial class Adminpanel : ContentPage
     {
         public Adminpanel()
-        { 
+        {
             InitializeComponent();
         }
         private async void Activity_Clicked(object sender, EventArgs e)
@@ -24,7 +24,6 @@ namespace Sailing
         private async void AddActivity_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Addactivity());
-            await Navigation.PopAsync();
         }
 
         private async void Review_Clicked(object sender, EventArgs e)

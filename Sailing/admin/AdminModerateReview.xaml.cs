@@ -19,7 +19,6 @@ namespace Sailing
         }
         private async void Delete_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PopAsync();
             await Navigation.PushAsync(new AdminModerateReview());
         }
     }
