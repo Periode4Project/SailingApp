@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+
 
 namespace Sailing
 {
@@ -13,11 +14,18 @@ namespace Sailing
     public partial class Settings : ContentPage
     {
         LocationClass locationClass = new LocationClass();
+      
+        
 
         public Settings()
         {
             InitializeComponent();
-            SetLocation();
+
+            var timer = new System.Threading.Timer((e) =>
+            {
+                SetLocation();
+            }, null, TimeSpan.Zero, TimeSpan.FromSeconds(10));
+            
         }
 
         private async void SaveSettings_Clicked(object sender, EventArgs e)
@@ -33,12 +41,15 @@ namespace Sailing
 
         private void GetStartedButton_Clicked(object sender, EventArgs e)
         {
-            
+             Navigation.PushAsync(new OnBoarding1());
         }
+
+        
 
         private async void SetLocation()
         {
-            string LocationText = await locationClass.GetLocation();
+            string LocationText = await locationClass.GetLocationName(Coordinates.currentLocation);
+
 
             switch (LocationText)
             {
@@ -59,8 +70,6 @@ namespace Sailing
                     GPSIndicator.BackgroundColor = Color.FromHex("#5cb85c");
                     break;
             }
-
-            
         }
     }
 }
