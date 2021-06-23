@@ -48,27 +48,9 @@ namespace Sailing
 
         private async void SetLocation()
         {
-            //string LocationText = await locationClass.GetLocation();
+            string LocationText = await locationClass.GetLocationName(Coordinates.currentLocation);
 
-            //switch (LocationText)
-            //{
-            //    case "Please enable GPS":
-            //        await DisplayAlert("Alert", "Please turn on GPS", "OK");
-            //        //voor nu wacht hij 10 seconden en probeert het weer
-            //        await Task.Delay(10 * 1000);
-            //        SetLocation();
-            //        break;
 
-            //    default:
-            //        GPSLocation.Text = LocationText;
-            //        break;
-            //}
-            //while (true)
-            //{
-                
-
-            //    await Task.Delay(10000);
-            //}
             switch (LocationText)
             {
                 case "Please enable GPS":
@@ -90,7 +72,7 @@ namespace Sailing
             }
 
             //haalt de huidige locatie in coordinaten op uit de Coordinates class en geeft die mee aan de GetlocationName van de locationclass 
-            GPSLocation.Text = await locationClass.GetLocationName(Coordinates.currentLocation);
+            //GPSLocation.Text = 
             
 
         }

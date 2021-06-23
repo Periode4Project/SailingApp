@@ -129,10 +129,12 @@ namespace Sailing
             return "error";
         }
 
-
+        
         public async Task<Location> GetCoordinates()
         {
             //gebruikt de gps om coordinaten op te halen, GeolocationAccuracy is natuurlijk hoe accuraat de coordinaten zijn, en de timespan is hoeveel tijd hij mag gebruiken
+
+
             var result = await Geolocation.GetLocationAsync(new GeolocationRequest(GeolocationAccuracy.Default, TimeSpan.FromMinutes(1)));
 
             return result;
