@@ -27,7 +27,7 @@
 
     <!--Colors for the lowest NavBar-->
 
-    <local:MyTab>
+
         <Tab Title="Activities" Icon="Home_Icon" x:Name="tab1">
             <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
         </Tab>
@@ -37,6 +37,6 @@
         <Tab Title="Settings" Icon="Settings.png">
             <ShellContent ContentTemplate="{DataTemplate local:Settings}"/>
         </Tab>
-    </local:MyTab>
+
 
 </Shell>

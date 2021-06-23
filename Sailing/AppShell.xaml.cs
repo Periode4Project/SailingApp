@@ -15,20 +15,20 @@ namespace Sailing
         {
             InitializeComponent();
         }
-        public class MyTab : TabBar
-        {
-            protected override void OnPropertyChanged([CallerMemberName] string propertyName = null)
-            {
-                if (propertyName == "CurrentItem")
-                {
-                    int index = this.Items.IndexOf(this.CurrentItem);
-                    if (index == 1)
-                    {
-                        Navigation.PopToRootAsync();
-                    }
+        //public class MyTab : TabBar
+        //{
+        //    protected override void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        //    {
+        //        if (propertyName == "CurrentItem")
+        //        {
+        //            int index = this.Items.IndexOf(this.CurrentItem);
+        //            if (index == 1)
+        //            {
+        //                Navigation.PopToRootAsync();
+        //            }
 
-                }
-            }
-        }
+        //        }
+        //    }
+        //}
     }
 }
