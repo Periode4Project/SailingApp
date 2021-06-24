@@ -9,40 +9,30 @@ namespace Sailing
 {
     class LocationClass
     {
+        /// <summary>
+        /// pakt de locatie doormiddel van het aanroepen van de getcoordinates method
+        /// </summary>
+        /// <returns></returns>
         public async Task<string> GetLocation() 
         {
-            
 
             try
             {
                 //result bevat de latitude en longitude opgehaald door de gps 
                 Location result = await GetCoordinates();
-                //de Location in activityitem is aangepast naar Locations om verwaring met de gps location tegen te gaan
 
                 var lat = result.Latitude;
                 var lon = result.Longitude;
 
-                //haalt de informatie op van de huidige locatie
+                //haalt de informatie op van de huidige locatie doormiddel van coordinaten via xamarin essentials
                 var placemarks = await Geocoding.GetPlacemarksAsync(lat, lon);
 
                 var placemark = placemarks?.FirstOrDefault();
                 if (placemark != null)
                 {
-                    //meerdere opties van wat je wil laten zien
-                    //var geocodeAddress =
-                        //$"AdminArea:       {placemark.AdminArea}\n" +
-                        //$"CountryCode:     {placemark.CountryCode}\n" +
-                        //$"CountryName:     {placemark.CountryName}\n" +
-                        //$"FeatureName:     {placemark.FeatureName}\n" +
-                        //$"Locality:        {placemark.Locality}\n" +
-                        //$"PostalCode:      {placemark.PostalCode}\n" +
-                        //$"SubAdminArea:    {placemark.SubAdminArea}\n" +
-                        //$"SubLocality:     {placemark.SubLocality}\n" +
-                        //$"SubThoroughfare: {placemark.SubThoroughfare}\n" +
-                        //$"Thoroughfare:    {placemark.Thoroughfare}\n";
-
+                    //pakt de locality(plaats/ligging) van de locatie
                     var geocodeAddress = placemark.Locality;
-
+                    //returnt de huidige locatie
                     return geocodeAddress;
                 }
             }
@@ -70,14 +60,16 @@ namespace Sailing
             return "error";
         }
 
+        /// <summary>
+        /// zelfde als de vorige method alleen geef je de coordinaten al mee
+        /// </summary>
+        /// <param name="result"></param>
+        /// <returns></returns>
         public async Task<string> GetLocationName(Location result)
         {
-
-
             try
             {
-                
-
+                //pak de latitude en longitude van de meegegeven locatie(coordinaten)
                 var lat = result.Latitude;
                 var lon = result.Longitude;
 
@@ -87,21 +79,10 @@ namespace Sailing
                 var placemark = placemarks?.FirstOrDefault();
                 if (placemark != null)
                 {
-                    //meerdere opties van wat je wil laten zien
-                    //var geocodeAddress =
-                    //$"AdminArea:       {placemark.AdminArea}\n" +
-                    //$"CountryCode:     {placemark.CountryCode}\n" +
-                    //$"CountryName:     {placemark.CountryName}\n" +
-                    //$"FeatureName:     {placemark.FeatureName}\n" +
-                    //$"Locality:        {placemark.Locality}\n" +
-                    //$"PostalCode:      {placemark.PostalCode}\n" +
-                    //$"SubAdminArea:    {placemark.SubAdminArea}\n" +
-                    //$"SubLocality:     {placemark.SubLocality}\n" +
-                    //$"SubThoroughfare: {placemark.SubThoroughfare}\n" +
-                    //$"Thoroughfare:    {placemark.Thoroughfare}\n";
 
+                    //pakt de locality(plaats/ligging) van de locatie
                     var geocodeAddress = placemark.Locality;
-
+                    //returnt de huidige locatie
                     return geocodeAddress;
                 }
             }
@@ -133,8 +114,6 @@ namespace Sailing
         public async Task<Location> GetCoordinates()
         {
             //gebruikt de gps om coordinaten op te halen, GeolocationAccuracy is natuurlijk hoe accuraat de coordinaten zijn, en de timespan is hoeveel tijd hij mag gebruiken
-
-
             var result = await Geolocation.GetLocationAsync(new GeolocationRequest(GeolocationAccuracy.Default, TimeSpan.FromMinutes(1)));
 
             return result;
@@ -158,6 +137,11 @@ namespace Sailing
             return Kilometers;
         }
 
+        /// <summary>
+        /// method om een address om te zetten in coordinaten
+        /// </summary>
+        /// <param name="address">een address waar de coordinaten van worden opgehaald</param>
+        /// <returns></returns>
         public async Task<Location> AddressToCoordinates(string address)
         {
             try

@@ -8,6 +8,7 @@ using Sailing.configuration;
 
 namespace Sailing
 {
+
     public static class SubmitReview
     {
         public static async Task<bool> IsSuccessful(string reviewTitle, string review, double rating, int activity)
@@ -17,7 +18,14 @@ namespace Sailing
                 return false;
             return await IsWebrequestSuccessful(reviewTitle, review, rating, activity);
         }
-
+        /// <summary>
+        /// toevoegen van review moet hier worden gedaan, werkt nog niet helemaal
+        /// </summary>
+        /// <param name="reviewTitle">de titel van de review</param>
+        /// <param name="review">de tekst van de review</param>
+        /// <param name="rating">de Rating</param>
+        /// <param name="activity">en om welke activity het gaat</param>
+        /// <returns></returns>
         public async static Task<bool> IsWebrequestSuccessful(string reviewTitle, string review, double rating, int activity)
         {
             

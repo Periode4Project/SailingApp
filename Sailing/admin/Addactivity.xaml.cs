@@ -9,6 +9,7 @@ using Xamarin.Forms.Xaml;
 
 namespace Sailing
 {
+    //TODO: maak add activity werkend
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Addactivity : ContentPage
     {

@@ -9,6 +9,11 @@ namespace Sailing.admin
 {
     public static class ActivityDeletion
     {
+        /// <summary>
+        /// Delete de meegegeven activity
+        /// </summary>
+        /// <param name="id">id van de te verwijderen activity</param>
+        /// <returns></returns>
         public async static Task<bool> IsDeleteActivitySuccessful(int id)
         {
             HttpClient httpClient = new HttpClient();
