@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Sailing
 {
+    /// <summary>
+    /// class van wat een review is
+    /// </summary>
     public class Review
     {
         public int ReviewID { get; set; }

@@ -9,6 +9,11 @@ namespace Sailing.UserPages
 {
     public class Reviews
     {
+        /// <summary>
+        /// haalt de reviews op uit de Backend
+        /// </summary>
+        /// <param name="activity"></param>
+        /// <returns></returns>
         public static async Task<List<Review>> GetAsync(int activity)
         {
             try

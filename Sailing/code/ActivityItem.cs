@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Sailing
 {
+    //activity class, layout van een activity
     public class ActivityItem
     {
         public int ActivityId { get; set; }

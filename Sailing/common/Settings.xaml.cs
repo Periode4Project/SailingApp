@@ -21,6 +21,7 @@ namespace Sailing
         {
             InitializeComponent();
 
+            //begin een timer die om de 10 seconden de SetLocation method uitvoert
             var timer = new System.Threading.Timer((e) =>
             {
                 SetLocation();
@@ -28,6 +29,11 @@ namespace Sailing
             
         }
 
+        /// <summary>
+        /// knop om settings op te slaan
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void SaveSettings_Clicked(object sender, EventArgs e)
         {
             bool result = await DisplayAlert("Confirmation","Are you sure you wish to continue?","Yes","No");
@@ -39,15 +45,23 @@ namespace Sailing
             }
         }
 
+        /// <summary>
+        /// laat de OnBoarding(tutorial) page zien als er op wordt geklikt
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GetStartedButton_Clicked(object sender, EventArgs e)
         {
              Navigation.PushAsync(new OnBoarding1());
         }
 
         
-
+        /// <summary>
+        /// Laat de huidige locatie zien in de settings pagina
+        /// </summary>
         private async void SetLocation()
         {
+            //haalt de huidige locatie op uit de Locationclass via geocoding met de huidige coordinaten uit de Coordinates class
             string LocationText = await locationClass.GetLocationName(Coordinates.currentLocation);
 
 

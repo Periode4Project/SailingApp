@@ -39,6 +39,7 @@ namespace Sailing
             bool answer = await DisplayAlert("Warning:", "Do you want to delete this activity?", "Yes", "No");
             if (answer)
             {
+                //verwijderd de geklikte activity
                 ActivityItem activity = (ActivityItem)e.CurrentSelection.FirstOrDefault();
                 await admin.ActivityDeletion.IsDeleteActivitySuccessful(activity.ActivityId);
                 await Navigation.PushAsync(new AdminModerateActivity());

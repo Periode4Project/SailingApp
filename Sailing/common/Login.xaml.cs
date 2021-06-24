@@ -18,7 +18,11 @@ namespace Sailing
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// checkt of de login correct is
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void LoginButton_Clicked(object sender, EventArgs e)
         {
             if (Config.User == null)

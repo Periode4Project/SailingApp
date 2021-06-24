@@ -9,6 +9,10 @@ namespace Sailing
 {
     public class ActivityItems
     {
+        /// <summary>
+        /// haalt alle activities op van de API en geeft ze terug in een lijst
+        /// </summary>
+        /// <returns></returns>
         public static async Task<List<ActivityItem>> GetAsync()
         {
             try

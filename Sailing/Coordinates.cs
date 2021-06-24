@@ -10,7 +10,7 @@ namespace Sailing
         public static double latitude { get; set; }
 
         public static double longitude { get; set; }
-
+        //opslag voor de huidige locatie
         public static Location currentLocation { get; set; }
         
 

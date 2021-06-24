@@ -12,6 +12,9 @@ namespace Sailing
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Adminpanel : ContentPage
     {
+        /// <summary>
+        /// knoppen voor de admin panel
+        /// </summary>
         public Adminpanel()
         {
             InitializeComponent();

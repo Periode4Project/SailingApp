@@ -15,6 +15,9 @@ namespace Sailing.UserPages
     public partial class ActivityPage : ContentPage
     {
         public List<Review> ReviewsList { get; set; }
+        /// <summary>
+        /// zet de activity op met de informatie die er bji hoort
+        /// </summary>
         public ActivityPage()
         {
             bool isDone = false;
@@ -27,6 +30,7 @@ namespace Sailing.UserPages
             ActivityFee.Text = CurrentItem.EntranceFee.ToString();
             ActivityDescription.Text = CurrentItem.ActivityDesc;
             //Create background thread to handle webrequest, remedies stuck on splash screen
+            //haalt de reviews op
             new Thread(async () =>
             {
                 ReviewsList = new List<Review>(await Reviews.GetAsync(CurrentItem.ActivityId));
@@ -48,7 +52,11 @@ namespace Sailing.UserPages
             collectionViewListHorizontal.ItemsSource = ReviewsList;
             
         }
-
+        /// <summary>
+        /// knop voor review toevoegen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void AddReview_Tapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AddNewReview());

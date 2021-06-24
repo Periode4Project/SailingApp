@@ -9,6 +9,11 @@ namespace Sailing.admin
 {
     public static class ReviewDeletion
     {
+        /// <summary>
+        /// delete de review met meegegeven id
+        /// </summary>
+        /// <param name="id">id van de review die wordt verwijdert</param>
+        /// <returns></returns>
         public async static Task<bool> IsDeleteReviewSuccessful(int id)
         {
             HttpClient httpClient = new HttpClient();
