@@ -2,24 +2,52 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
-
+using Sailing;
+using Sailing.UserPages;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Sailing
+namespace Sailing.Admin
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AdminModerateReview : ContentPage
     {
+        public List<Review> ListReviews { get; set; }
         public AdminModerateReview()
         {
+            bool isDone = false;
             InitializeComponent();
-            ActivityItem CurrentItem = SelectedActivity.activityItem;
+            //Create background thread to handle webrequest, remedies stuck on splash screen
+            new Thread(async () =>
+            {
+                ListReviews = await Reviews.GetAsync();
+                isDone = true;
+            }).Start();
+            //while it's not done, wait 1 second
+            while (!isDone)
+                Thread.Sleep(1);
+            collectionViewListHorizontal.ItemsSource = ListReviews;
         }
-        private async void Delete_Clicked(object sender, EventArgs e)
+
+        private async void SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            await Navigation.PushAsync(new AdminModerateReview());
+            if (collectionViewListHorizontal.SelectedItem == null)
+                return;
+            bool answer = await DisplayAlert("Warning:", "Do you want to delete this review?", "Yes", "No");
+            if (answer)
+            {
+                
+                Review review = (Review)e.CurrentSelection.FirstOrDefault();
+                await admin.ReviewDeletion.IsDeleteReviewSuccessful(review.ReviewID);
+                await Navigation.PushAsync(new AdminModerateReview());
+            }
+            else
+            {
+                await DisplayAlert("Cancelled", "Review has not been deleted.", "OK");
+                collectionViewListHorizontal.SelectedItem = null;
+            }
         }
     }
 }

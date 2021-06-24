@@ -28,7 +28,7 @@ namespace Sailing
 
         private async void Review_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AdminModerateReview());
+            await Navigation.PushAsync(new Admin.AdminModerateReview());
 
         }
         private async void Mail_Clicked(object sender, EventArgs e)

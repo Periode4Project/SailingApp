@@ -8,14 +8,14 @@
             <!--Head-->
             <Label Text="My Account" Style="{StaticResource PageHeader}" />
             <!--Login option-->
-            <Label Text="You're currently not logged in. Please log in" FontSize="36" Padding="20,100,20,0" VerticalTextAlignment="Center" HorizontalOptions="Center" TextColor="{StaticResource TertiaryColor}"/>
-            <Button Text="Login" x:Name="LoginButton" Style="{StaticResource BorderedButton}" Clicked="LoginButton_Clicked"/>
+            <Label x:Name="LoginLabel" Text="Log in/Log out" FontSize="36" Padding="20,100,20,0" VerticalTextAlignment="Center" HorizontalOptions="Center" TextColor="{StaticResource TertiaryColor}"/>
+            <Button Text="Login/Logout" x:Name="LoginButton" Style="{StaticResource BorderedButton}" Clicked="LoginButton_Clicked"/>
              <!--Register option-->
-            <Label Text="No Account? No Worries!! Sign Up Now!" HorizontalOptions="Center" Padding="0,20,0,0" TextColor="{StaticResource TertiaryColor}"/>
+            <Label x:Name="RegisterLabel" Text="No Account? No Worries!! Sign Up Now!" HorizontalOptions="Center" Padding="0,20,0,0" TextColor="{StaticResource TertiaryColor}"/>
             <Button Text="Register" x:Name="RegisterButton" Style="{StaticResource BorderedButton}" HeightRequest="50" Clicked="RegisterButton_Clicked"/>
 
-            <Label Text="Admin Panel, no login" HorizontalOptions="Center" Padding="0,20,0,0" TextColor="{StaticResource TertiaryColor}"/>
-            <Button Text="Temporary Admin" x:Name="Adminbutton" Padding="20,0"  Margin="20,0" Style="{StaticResource BorderedButton}" HeightRequest="50" Clicked="Admin_Clicked"/>
+            <Label Text="Admin Panel" x:Name="AdminLabel" HorizontalOptions="Center" Padding="0,20,0,0" TextColor="{StaticResource TertiaryColor}"/>
+            <Button Text="Admin" x:Name="Adminbutton" Padding="20,0"  Margin="20,0" Style="{StaticResource BorderedButton}" HeightRequest="50" Clicked="Admin_Clicked"/>
 
         </StackLayout>
     </ContentPage.Content>

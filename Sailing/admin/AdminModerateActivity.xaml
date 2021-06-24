@@ -16,10 +16,6 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Image Source="SearchIcon.png" Grid.Column="0" WidthRequest="45" HeightRequest="45"/>
-                    <Entry x:Name="SearchActivity" Grid.Column="1" Grid.ColumnSpan="3" Placeholder="Search Activity..." PlaceholderColor="#909090"/>
-
-                    <ImageButton Source="FilterIcon.png" x:Name="FilterButton" BackgroundColor="{StaticResource TertiaryColor}" Grid.Column="4" WidthRequest="45" HeightRequest="45" Clicked="FilterButton_Clicked"/>
 
                 </Grid>
 
@@ -35,22 +31,15 @@
                             <!--Activity Shell-->
 
                             <Frame BackgroundColor="#FFFFFF" CornerRadius="35" Margin="15, 0">
-
-
                                 <StackLayout x:Name="Activity" Margin="0, 15">
 
-                                    <ImageButton Clicked="Edit_Clicked"
-                                     Source="edit.png"
-                                     x:Name="Edit"
-                                     HorizontalOptions="Start"
-                                     VerticalOptions="Start" WidthRequest="30"  HeightRequest="30" BackgroundColor="Transparent" />
-
-                                    <!-- de knop voor Editen staat hierboven-->
+                                    <Image x:Name="ActivityImg" Source="{Binding ActivityImage}" WidthRequest="300" HeightRequest="200"/>
 
                                     <BoxView HeightRequest="1" BackgroundColor="Black"/>
 
                                     <Label x:Name="ActivityTitle" Text="{Binding ActivityName}" FontSize="Title"  TextColor="Black" FontAttributes="Bold"/>
 
+                                    <!--Type of the activity-->
                                     <Label Margin="0,-12" Style="{StaticResource DescriptionSmall}">
                                         <Label.FormattedText>
                                             <FormattedString>
@@ -62,7 +51,7 @@
                                         </Label.FormattedText>
                                     </Label>
 
-
+                                    <!--Location of the activity-->
                                     <Label Style="{StaticResource DescriptionSmall}">
                                         <Label.FormattedText>
                                             <FormattedString>
@@ -74,7 +63,7 @@
                                         </Label.FormattedText>
                                     </Label>
 
-
+                                    <!--Entrance fee for the activity-->
                                     <Label  Margin="0,-12" Style="{StaticResource DescriptionSmall}">
                                         <Label.FormattedText>
                                             <FormattedString>
@@ -89,13 +78,6 @@
 
                                     <Label FontSize="12"/>
 
-
-                                    <ImageButton Source="trashcan.png"
-                                     Clicked="Delete_Clicked"
-                                     x:Name="Delete"
-                                     HorizontalOptions="End"
-                                     VerticalOptions="End" WidthRequest="30"  HeightRequest="30" />
-                                     <!-- De knop voor verwijderen -->
                                 </StackLayout>
 
                             </Frame>

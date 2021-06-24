@@ -46,5 +46,27 @@ namespace Sailing
                 Language = configFile.Language;
             }
         }
+        public static void Write()
+        {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            string filename = Path.Combine(path, "config.json");
+            string json = JsonConvert.SerializeObject(new ConfigFile { User = User, Language = Language }, Formatting.Indented);
+            using (StreamWriter outFile = new StreamWriter(path: filename, append: false))
+            {
+                outFile.Write(json);
+            }
+        }
+        public static void Read()
+        {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            string filename = Path.Combine(path, "config.json");
+            using (StreamReader file = File.OpenText(filename))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                ConfigFile configFile = (ConfigFile)serializer.Deserialize(file, typeof(ConfigFile));
+                User = configFile.User;
+                Language = configFile.Language;
+            }
+        }
     }
 }

@@ -8,4 +8,8 @@ namespace Sailing
     {
         public static ActivityItem activityItem { get; set; }
     }
+    public static class SelectedReview
+    {
+        public static Review Review { get; set; }
+    }
 }
